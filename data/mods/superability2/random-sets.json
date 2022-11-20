@@ -1,0 +1,337 @@
+{
+    "venomoth": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "addedMovepool": ["Giga Drain"]
+            }
+        ]
+    },
+    "persian": {
+        "sets": [
+            {
+                "role": "Fast Attacker",
+                "movepool": ["Covet", "Fake Out", "Bite", "Switcheroo", "U-turn", "Trailblaze"],
+                "teraTypes": ["Normal", "Dark"]
+            }
+        ]
+    },
+    "scyther": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "addedMovepool": ["Quick Attack"]
+            },
+            {
+                "role": "Fast Support",
+                "addedMovepool": ["Quick Attack"]
+            }
+        ]
+    },
+    "tauros": {
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "addedMovepool": ["Body Slam", "Bulldoze", "Rock Slide"],
+                "removedMovepool": ["Double-Edge", "Earthquake", "Stone Edge"]
+            }
+        ]
+    },
+    "noctowl": {
+        "sets": [
+            {
+                "role": "Bulky Support",
+                "addedMovepool": ["Hyper Voice"],
+                "removedMovepool": ["Heat Wave"]
+            }
+        ]
+    },
+    "scizor": {
+        "sets": [
+            {
+                "role": "Bulky Support",
+                "addedMovepool": ["Dual Wingbeat"],
+                "removedMovepool": ["Knock Off"]
+            },
+            {
+                "role": "Setup Sweeper",
+                "addedMovepool": ["Dual Wingbeat"],
+                "removedMovepool": ["Knock Off"]
+            },
+            {
+                "role": "Wallbreaker",
+                "addedMovepool": ["Dual Wingbeat"],
+                "removedMovepool": ["Knock Off"]
+            }
+        ]
+    },
+    "ursaring": {
+        "sets": [
+            {
+                "role": "Fast Attacker",
+                "movepool": ["Facade", "Crunch", "Earthquake", "Close Combat"],
+                "teraTypes": ["Dark", "Ground", "Fighting"]
+            }
+        ]
+    },
+    "hariyama": {
+        "sets": [
+            {
+                "role": "AV Pivot",
+                "addedMovepool": ["Low Sweep", "Iron Head"],
+                "removedMovepool": ["Close Combat", "Heavy Slam"]
+            }
+        ]
+    },
+    "jirachi": {
+        "sets": [
+            {
+                "role": "Bulky Support",
+                "addedMovepool": ["Thunder Punch", "Meteor Mash"],
+                "removedMovepool": ["Body Slam", "Iron Head"]
+            }
+        ]
+    },
+    "infernape": {
+        "sets": [
+            {
+                "role": "Fast Attacker",
+                "addedMovepool": ["Drain Punch", "Thunder Punch"],
+                "removedMovepool": ["Close Combat"]
+            },
+            {
+                "role": "Fast Support",
+                "addedMovepool": ["Drain Punch", "Fire Punch", "Thunder Punch"],
+                "removedMovepool": ["Close Combat", "Flare Blitz"]
+            }
+        ]
+    },
+    "ambipom": {
+        "sets": [
+            {
+                "role": "Fast Attacker",
+                "addedMovepool": ["Beat Up"],
+                "removedMovepool": ["Knock Off"]
+            }
+        ]
+    },
+    "yanmega": {
+        "level": 84,
+        "sets": [
+            {
+                "role": "Tera Blast user",
+                "movepool": ["Air Slash", "Bug Buzz", "Giga Drain", "Tera Blast"],
+                "teraTypes": ["Fighting"]
+            }
+        ]
+    },
+    "shayminsky": {
+        "level": 76,
+        "sets": [
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Air Cutter"],
+                "removedMovepool": ["Air Slash"],
+                "removedTeraTypes": ["Flying"]
+            },
+            {
+                "role": "Bulky Support",
+                "addedMovepool": ["Air Cutter"],
+                "removedMovepool": ["Air Slash"]
+            }
+        ]
+    },
+    "sawsbuck": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "addedMovepool": ["Body Slam"],
+                "removedMovepool": ["Double-Edge", "Headbutt"]
+            }
+        ]
+    },
+    "braviaryhisui": {
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "addedMovepool": ["Dazzling Gleam"],
+                "removedMovepool": ["Heat Wave"]
+            }
+        ]
+    },
+    "zweilous": {
+        "level": 83,
+        "sets": [
+            {
+                "role": "Bulky Attacker",
+                "movepool": ["Crunch", "Outrage", "Fire Fang", "U-turn"],
+                "teraTypes": ["Dark", "Dragon", "Fire"]
+            }
+        ]
+    },
+    "meloetta": {
+        "sets": [
+            {
+                "role": "Fast Attacker",
+                "addedMovepool": ["Psychic"]
+            },
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Swords Dance", "Close Combat", "Relic Song", "Knock Off"],
+                "teraTypes": ["Fighting", "Normal", "Dark"]
+            }
+        ]
+    },
+    "avalugghisui": {
+        "sets": [
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Ice Fang", "Crunch"],
+                "removedMovepool": ["Avalanche", "Stone Edge"],
+                "addedTeraTypes": ["Dark"]
+            }
+        ]
+    },
+    "crabominable": {
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "addedMovepool": ["Thunder Punch"],
+                "removedMovepool": ["Close Combat"],
+                "addedTeraTypes": ["Electric"]
+            }
+        ]
+    },
+    "inteleon": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Dark Pulse", "Snipe Shot", "Air Cutter", "Focus Energy"],
+                "teraTypes": ["Water", "Flying"]
+            }
+        ]
+    },
+    "drednaw": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "addedMovepool": ["Ice Fang"],
+                "removedMovepool": ["Liquidation"],
+                "removedTeraTypes": ["Water"]
+            }
+        ]
+    },
+    "perrserker": {
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "teraTypes": ["Steel"]
+            }
+        ]
+    },
+    "copperajah": {
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "addedMovepool": ["Bulldoze"],
+                "removedMovepool": ["Earthquake"]
+            },
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Bulldoze", "Heavy Slam", "Stone Edge"],
+                "removedMovepool": ["Earthquake", "Iron Head", "Rock Slide"]
+            }
+        ]
+    },
+    "kleavor": {
+        "sets": [
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Night Slash"],
+                "removedMovepool": ["Close Combat"],
+                "addedTeraTypes": ["Dark"],
+                "removedTeraTypes": ["Fighting"]
+            }
+        ]
+    },
+    "maushold": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Bite", "Trailblaze", "Population Bomb", "Tidy Up"]
+            }
+        ]
+    },
+    "mausholdfour": {
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Bite", "Trailblaze", "Population Bomb", "Tidy Up"]
+            }
+        ]
+    },
+    "cetitan": {
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "addedMovepool": ["Bulldoze"],
+                "removedMovepool": ["Earthquake"]
+            }
+        ]
+    },
+    "girafarig": {
+        "level": 92,
+        "sets": [
+            {
+                "role": "Bulky Support",
+                "movepool": ["Foul Play", "Hyper Voice", "Rest", "Future Sight"],
+                "teraTypes": ["Dark"]
+            }
+        ]
+    },
+    "dudunsparce": {
+        "sets": [
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Body Slam"],
+                "removedMovepool": ["Headbutt"]
+            },
+            {
+                "role": "Bulky Support",
+                "addedMovepool": ["Flamethrower"]
+            }
+        ]
+    },
+    "dudunsparcethreesegment": {
+        "sets": [
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Body Slam"],
+                "removedMovepool": ["Headbutt"]
+            },
+            {
+                "role": "Bulky Support",
+                "addedMovepool": ["Flamethrower"]
+            }
+        ]
+    },
+    "fezandipiti": {
+        "sets": [
+            {
+                "role": "AV Pivot",
+                "addedMovepool": ["Poison Tail"],
+                "removedMovepool": ["Gunk Shot"]
+            },
+            {
+                "role": "Bulky Attacker",
+                "addedMovepool": ["Poison Tail"],
+                "removedMovepool": ["Gunk Shot"]
+            },
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Poison Tail", "Play Rough", "Swords Dance", "Double Kick"],
+                "teraTypes": ["Fighting"]
+            }
+        ]
+    }
+}

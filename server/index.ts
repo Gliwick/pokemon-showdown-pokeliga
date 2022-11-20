@@ -65,7 +65,7 @@ function setupGlobals() {
 	const ConfigLoader = require('./config-loader');
 	global.Config = ConfigLoader.Config;
 
-	const {Monitor} = require('./monitor');
+	const {Monitor, MONITOR_CLEAN_TIMEOUT} = require('./monitor');
 	global.Monitor = Monitor;
 	global.__version = {head: ''};
 	void Monitor.version().then((hash: any) => {
@@ -124,6 +124,8 @@ function setupGlobals() {
 	const {IPTools} = require('./ip-tools');
 	global.IPTools = IPTools;
 	void IPTools.loadHostsAndRanges();
+
+	Monitor.cleanInterval = setInterval(() => Monitor.clean(), MONITOR_CLEAN_TIMEOUT);
 }
 setupGlobals();
 

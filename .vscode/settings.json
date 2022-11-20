@@ -5,6 +5,9 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.format.semicolons": "insert",
   "eslint.options": {
-    "configFile": ".eslintrc.json"
-  }
+    "overrideConfigFile": ".eslintrc.json"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
 }

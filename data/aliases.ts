@@ -1015,7 +1015,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	squawk: "Squawkabilly",
 	staka: "Stakataka",
 	steela: "Celesteela",
-	sui: "Suicune",
 	swole: "Buzzwole",
 	sylv: "Sylveon",
 	talon: "Talonflame",
