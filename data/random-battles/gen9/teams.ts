@@ -3,24 +3,25 @@ import {Utils} from '../../../lib';
 import {PRNG, PRNGSeed} from '../../../sim/prng';
 import {RuleTable} from '../../../sim/dex-formats';
 import {Tags} from './../../tags';
+import {OldRandomBattleSpecies} from '../gen8/teams';
 
 export interface TeamData {
-	typeCount: {[k: string]: number};
-	typeComboCount: {[k: string]: number};
-	baseFormes: {[k: string]: number};
+	typeCount: { [k: string]: number };
+	typeComboCount: { [k: string]: number };
+	baseFormes: { [k: string]: number };
 	megaCount?: number;
 	zCount?: number;
 	wantsTeraCount?: number;
 	has: {[k: string]: number};
 	forceResult: boolean;
-	weaknesses: {[k: string]: number};
-	resistances: {[k: string]: number};
+	weaknesses: { [k: string]: number };
+	resistances: { [k: string]: number };
 	weather?: string;
 	eeveeLimCount?: number;
 	gigantamax?: boolean;
 }
 export interface BattleFactorySpecies {
-	flags: {limEevee?: 1};
+	flags: { limEevee?: 1 };
 	sets: BattleFactorySet[];
 }
 interface BattleFactorySet {
@@ -162,7 +163,7 @@ export class RandomTeams {
 	 *
 	 * returns true to try to force the move type, false otherwise.
 	 */
-	moveEnforcementCheckers: {[k: string]: MoveEnforcementChecker};
+	moveEnforcementCheckers: { [k: string]: MoveEnforcementChecker };
 
 	constructor(format: Format | string, prng: PRNG | PRNGSeed | null) {
 		format = Dex.formats.get(format);
@@ -242,7 +243,7 @@ export class RandomTeams {
 	getTeam(options?: PlayerOptions | null): PokemonSet[] {
 		const generatorName = (
 			typeof this.format.team === 'string' && this.format.team.startsWith('random')
-		 ) ? this.format.team + 'Team' : '';
+		) ? this.format.team + 'Team' : '';
 		// @ts-ignore
 		return this[generatorName || 'randomTeam'](options);
 	}
@@ -1382,8 +1383,8 @@ export class RandomTeams {
 	): number {
 		if (this.adjustLevel) return this.adjustLevel;
 		// doubles levelling
-		if (isDoubles && this.randomDoublesSets[species.id]["level"]) return this.randomDoublesSets[species.id]["level"]!;
-		if (!isDoubles && this.randomSets[species.id]["level"]) return this.randomSets[species.id]["level"]!;
+		if (isDoubles && this.randomDoublesSets[species.id]?.level) return this.randomDoublesSets[species.id]["level"]!;
+		if (!isDoubles && this.randomSets[species.id]?.level) return this.randomSets[species.id]["level"]!;
 		// Default to tier-based levelling
 		const tier = species.tier;
 		const tierScale: Partial<Record<Species['tier'], number>> = {
@@ -1398,7 +1399,7 @@ export class RandomTeams {
 			PUBL: 87,
 			PU: 88, "(PU)": 88, NFE: 88,
 		};
-		return tierScale[tier] || 80;
+		return tierScale[tier] || this.oldRandomData[species.id]?.level || 80;
 	}
 
 	getForme(species: Species): string {
@@ -1592,6 +1593,7 @@ export class RandomTeams {
 
 	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./sets.json');
 	randomDoublesSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./doubles-sets.json');
+	oldRandomData: {[species: string]: OldRandomBattleSpecies} = require('../gen8/data.json');
 
 	randomTeam() {
 		this.enforceNoDirectCustomBanlistChanges();
@@ -1788,6 +1790,8 @@ export class RandomTeams {
 			if (set.role === 'Tera Blast user' || species.baseSpecies === "Ogerpon" || species.baseSpecies === "Terapagos") {
 				teamDetails.teraBlast = 1;
 			}
+
+			if (set.ability === 'Grassy Surge') teamDetails.grassyterrain = true;
 		}
 		if (pokemon.length < this.maxTeamSize && pokemon.length < 12) { // large teams sometimes cannot be built
 			throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
@@ -2033,7 +2037,7 @@ export class RandomTeams {
 			}
 		}
 
-		const hasDexNumber: {[k: string]: number} = {};
+		const hasDexNumber: { [k: string]: number } = {};
 		for (let i = 0; i < n; i++) {
 			const num = this.sampleNoReplace(pool);
 			hasDexNumber[num] = i;
@@ -2089,11 +2093,26 @@ export class RandomTeams {
 						if (item.isNonstandard) {
 							banReason = ruleTable.check('pokemontag:' + toID(item.isNonstandard));
 							if (banReason) continue;
-							if (banReason !== '' && item.isNonstandard !== 'Unobtainable') {
+							if (hasAllItemsBan !== '' && banReason !== '' && item.isNonstandard !== 'Unobtainable') {
 								if (hasNonexistentBan) continue;
 								if (!hasNonexistentWhitelist) continue;
 							}
 						}
+					}
+					// useless items
+					const fling = item.fling;
+					if (
+						!(fling && (fling.basePower >= 130 || fling.status)) &&
+						!Object.keys(item).some(key => key.startsWith('on') && !['onDrive', 'onMemory', 'onPlate'].includes(key))
+					) {
+						continue;
+					}
+					if (item.itemUser && item.itemUser.length === 1) {
+						continue;
+					}
+					// cut mechanics
+					if (this.gen > 7 && (item.megaStone || item.zMove)) {
+						continue;
 					}
 					itemPool.push(item);
 				}
@@ -2223,9 +2242,15 @@ export class RandomTeams {
 				const move = this.sampleNoReplace(movePool);
 				m.push(move.id);
 			} while (m.length < setMoveCount);
+			const physicalMoveTypes = m.map(id => this.dex.moves.get(id))
+				.filter(move => move.category === 'Physical' && !(move.damage || move.damageCallback))
+				.map(move => move.type);
+			const specialMoveTypes = m.map(id => this.dex.moves.get(id))
+				.filter(move => move.category === 'Special' && !(move.damage || move.damageCallback))
+				.map(move => move.type);
 
 			// Random EVs
-			const evs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
+			const evs = this.statsTableOf(0);
 			if (this.gen === 6) {
 				let evpool = 510;
 				do {
@@ -2256,38 +2281,255 @@ export class RandomTeams {
 				nature = this.sample(naturePool).name;
 			}
 
+			// Random Tera type
+			let teraType: string | undefined;
+			if (this.gen === 9) {
+				if (species.baseSpecies === 'Ogerpon') {
+					teraType = this.sample(['Fire', 'Grass', 'Rock', 'Water']);
+				} else if (species.baseSpecies === 'Terapagos') {
+					teraType = 'Stellar';
+				} else if (this.forceTeraType) {
+					teraType = this.forceTeraType;
+				} else {
+					teraType = this.sample(this.dex.types.all()).name;
+				}
+			}
+
 			// Level balance
-			const mbstmin = 1307;
+			const multipliers = this.statsTableOf(1);
+
+			let status: 'brn' | 'tox' | null = null;
+			if (
+				item === 'Flame Orb' &&
+				!species.types.includes('Fire') &&
+				!['Comatose', 'Klutz', 'Purifying Salt', 'Thermal Exchange', 'Water Bubble', 'Water Veil'].includes(ability) &&
+				!(species.types.includes('Grass') && ability === 'Flower Veil') &&
+				!(!species.types.includes('Flying') && ability === 'Misty Surge')
+			) {
+				status = 'brn';
+			}
+			if (
+				item === 'Toxic Orb' &&
+				!species.types.includes('Poison') && !species.types.includes('Steel') &&
+				!['Comatose', 'Immunity', 'Klutz', 'Purifying Salt'].includes(ability) &&
+				!(species.types.includes('Grass') && ability === 'Flower Veil') &&
+				!(!species.types.includes('Flying') && ability === 'Misty Surge')
+			) {
+				status = 'tox';
+			}
+
+			if (species.name === 'Shedinja' && (ability !== 'Sturdy' || item === 'Black Sludge' || status)) {
+				multipliers['hp'] = 0;
+			}
+
+			const types = species.types.concat(teraType ? [teraType] : []);
+
+			switch (ability) {
+			case 'Arena Trap':
+			case 'Shadow Tag':
+				multipliers['hp'] *= (7 / 6);
+				multipliers['atk'] *= (7 / 6);
+				multipliers['def'] *= (7 / 6);
+				multipliers['spa'] *= (7 / 6);
+				multipliers['spd'] *= (7 / 6);
+				multipliers['spe'] *= (7 / 6);
+				break;
+			case 'Color Change':
+				multipliers['atk'] *= (2 / 3);
+				multipliers['spa'] *= (2 / 3);
+				break;
+			case 'Dauntless Shield':
+			case 'Intimidate':
+				multipliers['def'] *= 1.5;
+				break;
+			case 'Defeatist':
+				multipliers['hp'] *= 0.5;
+				break;
+			case 'Download':
+				multipliers['atk'] *= 1.5;
+				multipliers['spa'] *= 1.5;
+				break;
+			case "Dragon's Maw":
+				if (types.includes('Dragon')) {
+					if (physicalMoveTypes.includes('Dragon')) multipliers['atk'] *= 1.5;
+					if (specialMoveTypes.includes('Dragon')) multipliers['spa'] *= 1.5;
+				}
+				break;
+			case 'Flare Boost':
+				if (status === 'brn') multipliers['spa'] *= 1.5;
+				break;
+			case 'Fluffy':
+			case 'Fur Coat':
+				multipliers['def'] *= 2;
+				break;
+			case 'Gorilla Tactics':
+				multipliers['atk'] *= 1.5;
+				break;
+			case 'Guts':
+				if (status) multipliers['atk'] *= 1.5;
+				break;
+			case 'Hadron Engine':
+				const notGrounded = !species.types.includes('Flying') || item === 'Iron Ball';
+				if (
+					((species.types.includes('Electric') && notGrounded) || teraType === 'Electric') &&
+					specialMoveTypes.includes('Electric')
+				) {
+					multipliers['spa'] *= (1.3 * 4 / 3);
+				}
+				break;
+			case 'Huge Power':
+			case 'Pure Power':
+				multipliers['atk'] *= 2;
+				break;
+			case 'Ice Scales':
+				multipliers['spd'] *= 2;
+				break;
+			case 'Intrepid Sword':
+				multipliers['atk'] *= 1.5;
+				break;
+			case 'Marvel Scale':
+				if (status) multipliers['def'] *= 1.5;
+				break;
+			case 'Moody':
+				multipliers['atk'] *= (4 / 3);
+				multipliers['def'] *= (4 / 3);
+				multipliers['spa'] *= (4 / 3);
+				multipliers['spd'] *= (4 / 3);
+				multipliers['spe'] *= (4 / 3);
+				break;
+			case 'Normalize':
+				if (!types.includes('Normal')) {
+					multipliers['atk'] *= 0.8;
+					multipliers['spa'] *= 0.8;
+				}
+				break;
+			case 'Orichalcum Pulse':
+				if (types.includes('Fire') && physicalMoveTypes.includes('Fire')) multipliers['atk'] *= 2;
+				break;
+			case 'Quick Feet':
+				if (status) multipliers['spe'] *= 1.5;
+				break;
+			case 'Parental Bond':
+				let parentalBondMultiplier = 1;
+				if (m.some(name =>
+					['Guardian of Alola', 'Lumina Crash', "Nature's Madness", 'Ruination', 'Seed Flare', 'Super Fang'].includes(name))) {
+					parentalBondMultiplier = 1.5;
+				}
+				if (m.includes('Night Shade') || m.includes('Psywave') || m.includes('Seismic Toss')) {
+					parentalBondMultiplier = 2;
+				}
+				if (parentalBondMultiplier > 1) {
+					multipliers['atk'] *= parentalBondMultiplier;
+					multipliers['spa'] *= parentalBondMultiplier;
+				}
+				break;
+			case 'Poison Heal':
+				if (status === 'tox') multipliers['hp'] *= 1.25;
+				break;
+			case 'Rocky Payload':
+				if (types.includes('Rock')) {
+					if (physicalMoveTypes.includes('Rock')) multipliers['atk'] *= 1.5;
+					if (specialMoveTypes.includes('Rock')) multipliers['spa'] *= 1.5;
+				}
+				break;
+			case 'Regenerator':
+				multipliers['hp'] *= (4 / 3);
+				break;
+			case 'Sand Spit':
+			case 'Sand Stream':
+				if (types.includes('Rock')) multipliers['spd'] *= 1.5;
+				break;
+			case 'Slow Start':
+				multipliers['atk'] *= 0.5;
+				multipliers['spe'] *= 0.5;
+				break;
+			case 'Snow Warning':
+				if (types.includes('Ice')) multipliers['def'] *= 1.5;
+				break;
+			case 'Speed Boost':
+				multipliers['spe'] *= 1.5;
+				break;
+			case 'Stall':
+				multipliers['spe'] = 0;
+				break;
+			case 'Steelworker':
+			case 'Steely Spirit':
+				if (types.includes('Steel')) {
+					if (physicalMoveTypes.includes('Steel')) multipliers['atk'] *= 1.5;
+					if (specialMoveTypes.includes('Steel')) multipliers['spa'] *= 1.5;
+				}
+				break;
+			case 'Toxic Boost':
+				if (status === 'tox') multipliers['atk'] *= 1.5;
+				break;
+			case 'Truant':
+				multipliers['hp'] *= (2 / 3);
+				multipliers['atk'] *= (2 / 3);
+				multipliers['def'] *= (2 / 3);
+				multipliers['spa'] *= (2 / 3);
+				multipliers['spd'] *= (2 / 3);
+				break;
+			case 'Water Bubble':
+				if (types.includes('Water')) {
+					if (physicalMoveTypes.includes('Water')) multipliers['atk'] *= 2;
+					if (specialMoveTypes.includes('Water')) multipliers['spa'] *= 2;
+				}
+				break;
+			case 'Weak Armor':
+				multipliers['def'] *= (2 / 3);
+				multipliers['spe'] *= (4 / 3);
+				break;
+			case 'Wonder Guard':
+				multipliers['hp'] *= Math.sqrt(2);
+				multipliers['def'] *= Math.sqrt(2);
+				multipliers['spd'] *= Math.sqrt(2);
+				break;
+			}
+
+			if (ability !== 'Klutz') {
+				switch (item) {
+				case 'Black Sludge':
+					if (!types.includes('Poison') && ability !== 'Magic Guard') multipliers['hp'] *= 0.75;
+					break;
+				case 'Iron Ball':
+				case 'Macho Brace':
+					multipliers['spe'] *= 0.5;
+					break;
+				}
+			}
+
+			switch (status) {
+			case 'brn':
+				if (ability !== 'Guts') multipliers['atk'] *= 0.5;
+				break;
+			case 'tox':
+				if (['Magic Guard', 'Poison Heal'].includes(ability)) { multipliers['hp'] *= 0.8125; }
+				break;
+			}
+
+			const mbstmin = this.getActualStatTotal(this.dex.species.get('Wishiwashi').baseStats);
 			const stats = species.baseStats;
-			let mbst = (stats['hp'] * 2 + 31 + 21 + 100) + 10;
-			mbst += (stats['atk'] * 2 + 31 + 21 + 100) + 5;
-			mbst += (stats['def'] * 2 + 31 + 21 + 100) + 5;
-			mbst += (stats['spa'] * 2 + 31 + 21 + 100) + 5;
-			mbst += (stats['spd'] * 2 + 31 + 21 + 100) + 5;
-			mbst += (stats['spe'] * 2 + 31 + 21 + 100) + 5;
+			let mbst = this.getActualStatTotal(stats, 100, multipliers);
 
 			let level;
 			if (this.adjustLevel) {
 				level = this.adjustLevel;
 			} else {
 				level = Math.floor(100 * mbstmin / mbst);
-				while (level < 100) {
-					mbst = Math.floor((stats['hp'] * 2 + 31 + 21 + 100) * level / 100 + 10);
-					mbst += Math.floor(((stats['atk'] * 2 + 31 + 21 + 100) * level / 100 + 5) * level / 100);
-					mbst += Math.floor((stats['def'] * 2 + 31 + 21 + 100) * level / 100 + 5);
-					mbst += Math.floor(((stats['spa'] * 2 + 31 + 21 + 100) * level / 100 + 5) * level / 100);
-					mbst += Math.floor((stats['spd'] * 2 + 31 + 21 + 100) * level / 100 + 5);
-					mbst += Math.floor((stats['spe'] * 2 + 31 + 21 + 100) * level / 100 + 5);
+				while (level < 101) {
+					mbst = this.getActualStatTotal(stats, level, multipliers);
 					if (mbst >= mbstmin) break;
 					level++;
 				}
 			}
+			if (ability !== 'Klutz' && item === 'Ring Target') level++;
 
 			// Random happiness
 			const happiness = this.random(256);
 
 			// Random shininess
 			const shiny = this.randomChance(1, 1024);
+			if (shiny) level++;
 
 			const set: PokemonSet = {
 				name: species.baseSpecies,
@@ -2299,17 +2541,13 @@ export class RandomTeams {
 				evs,
 				ivs,
 				nature,
-				level,
+				level: Math.min(level, 101),
 				happiness,
 				shiny,
 			};
 			if (this.gen === 9) {
 				// Random Tera type
-				if (this.forceTeraType) {
-					set.teraType = this.forceTeraType;
-				} else {
-					set.teraType = this.sample(this.dex.types.all()).name;
-				}
+				set.teraType = teraType;
 			}
 			team.push(set);
 		}
@@ -2598,6 +2836,116 @@ export class RandomTeams {
 
 		return pokemon;
 	}
+	getActualStatTotal(stats: StatsTable, level = 100, multipliers?: StatsTable) {
+		const actualStats = {
+			hp: Math.floor((stats['hp'] * 2 + 31 + 21 + 100) * level / 100 + 10),
+			atk: Math.floor(((stats['atk'] * 2 + 31 + 21 + 100) * level / 100 + 5) * level / 100),
+			def: Math.floor((stats['def'] * 2 + 31 + 21 + 100) * level / 100 + 5),
+			spa: Math.floor(((stats['spa'] * 2 + 31 + 21 + 100) * level / 100 + 5) * level / 100),
+			spd: Math.floor((stats['spd'] * 2 + 31 + 21 + 100) * level / 100 + 5),
+			spe: Math.floor((stats['spe'] * 2 + 31 + 21 + 100) * level / 100 + 5),
+		};
+		return (Object.keys(actualStats) as (keyof StatsTable)[])
+			.map(stat => Math.floor(actualStats[stat] * (multipliers?.[stat] ?? 1)))
+			.reduce((acc, v) => acc + v, 0);
+	}
+	statsTableOf(value: number): StatsTable {
+		return {hp: value, atk: value, def: value, spa: value, spd: value, spe: value};
+	}
+	getEVsAndIVs(species: Species, ability: string, item: string, level: number, moves: string[]): StatsValues {
+		moves = moves.map(m => toID(m));
+
+		const evs = this.gen < 3 ?
+			this.statsTableOf(252) :
+			(['Noble Heart', 'Mycelium Might', 'Stall'].includes(ability) ?
+				{...this.statsTableOf(100), spe: 8} :
+				this.statsTableOf(84));
+
+		const ivs = this.gen < 3 ? this.statsTableOf(30) : this.statsTableOf(31);
+		if (this.gen >= 3) {
+			const minimizedStats: StatID[] = [];
+
+			const categories = {'Physical': 0, 'Special': 0, 'Status': 0};
+			moves.forEach(m => {
+				const move = this.dex.moves.get(m);
+				if (move.damageCallback || move.damage || ['bodypress', 'foulplay'].includes(move.id)) return;
+				if (move.id === 'terablast') {
+					categories.Physical++;
+					if (!moves.includes('dragondance') && !moves.includes('swordsdance')) categories.Special++;
+					return;
+				}
+				categories[move.category]++;
+				if (move.id === 'photongeyser') categories.Physical++;
+				if (move.id === 'shellsidearm' && item !== 'Choice Specs') categories.Physical++;
+			});
+
+			// Minimize confusion damage
+			if (categories.Physical === 0 && ability !== 'Imposter') {
+				minimizedStats.push('atk');
+			}
+
+			if (categories.Special === 0 && ['Beast Boost', 'Protosynthesis', 'Quark Drive'].includes(ability)) {
+				minimizedStats.push('spa');
+			}
+
+			if (moves.includes('gyroball') || moves.includes('trickroom') || ['Analytic', 'Imposter'].includes(ability)) {
+				minimizedStats.push('spe');
+			}
+
+			if (
+				(moves.includes('flail') || moves.includes('reversal')) &&
+				(moves.includes('endure') || ability === 'Sturdy' || item === 'Focus Sash') &&
+				!moves.includes('substitute')
+			) {
+				minimizedStats.push('hp');
+				minimizedStats.push('def');
+				minimizedStats.push('spd');
+			}
+
+			minimizedStats.forEach((stat) => {
+				evs[stat] = 0;
+				ivs[stat] = 0;
+			});
+		}
+
+		const srImmunity = ability === 'Magic Guard' || item === 'Heavy-Duty Boots';
+		const srWeakness = srImmunity ? 0 : this.dex.getEffectiveness('Rock', species);
+		while (evs.hp >= 4) {
+			const hp = Math.floor(Math.floor(2 * species.baseStats.hp + ivs.hp + Math.floor(evs.hp / 4) + 100) * level / 100 + 10);
+			const multipleOf4Necessary = (moves.includes('substitute') && !['Leftovers', 'Black Sludge'].includes(item) &&
+				(item === 'Sitrus Berry' || ability === 'Power Construct'));
+			if (ability === 'Chain Body') {
+				if (hp % 10 === 9) break;
+			} else if (multipleOf4Necessary) {
+				// Two Substitutes should activate Sitrus Berry
+				if (hp % 4 === 0) break;
+			} else if (moves.includes('bellydrum') && (['Salac Berry', 'Sitrus Berry'].includes(item) || ability === 'Gluttony')) {
+				// Belly Drum should activate Sitrus Berry
+				if (hp % 2 === 0) break;
+			} else if (moves.includes('substitute') && (moves.includes('flail') || moves.includes('reversal'))) {
+				// Reversal users should be able to use four Substitutes
+				if (hp % 4 > 0) break;
+			} else {
+				// Maximize number of Stealth Rock switch-ins
+				if (srWeakness <= 0 || hp % (4 / srWeakness) > 0) break;
+			}
+			evs.hp -= 4;
+		}
+
+		return {evs, ivs};
+	}
+}
+
+interface StatsValues {
+	evs: StatsTable;
+	ivs: StatsTable;
+}
+
+export interface PokemonDetails {
+	counterPhys?: number;
+	counterSpec?: number;
+	hasRecovery?: boolean;
+	hasMove: Record<string, boolean>;
 }
 
 export default RandomTeams;

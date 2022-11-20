@@ -682,6 +682,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	let nationalSearch = null;
 	let unreleasedSearch = null;
 	let fullyEvolvedSearch = null;
+	let fossilSearch = null;
 	let singleTypeSearch = null;
 	let randomOutput = 0;
 	const validParameter = (cat: string, param: string, isNotSearch: boolean, input: string) => {
@@ -897,6 +898,14 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				break;
 			}
 
+			if (target === 'fossil') {
+				if (fossilSearch === isNotSearch) return {error: "A search cannot include and exclude 'fossil'."};
+				if (parameters.length > 1) return {error: "The parameter 'fossil' cannot have alternative parameters."};
+				fossilSearch = !isNotSearch;
+				orGroup.skip = true;
+				break;
+			}
+
 			if (target === 'recovery') {
 				const recoveryMoves = [
 					"healorder", "junglehealing", "lifedew", "milkdrink", "moonlight", "morningsun", "recover",
@@ -1070,7 +1079,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	}
 	if (
 		showAll && searches.length === 0 && singleTypeSearch === null &&
-		megaSearch === null && gmaxSearch === null && fullyEvolvedSearch === null && sort === null
+		megaSearch === null && gmaxSearch === null && fullyEvolvedSearch === null && fossilSearch === null && sort === null
 	) {
 		return {
 			error: "No search parameters other than 'all' were found. Try '/help dexsearch' for more information on this command.",
@@ -1082,6 +1091,10 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		const megaSearchResult = megaSearch === null || megaSearch === !!species.isMega;
 		const gmaxSearchResult = gmaxSearch === null || gmaxSearch === species.name.endsWith('-Gmax');
 		const fullyEvolvedSearchResult = fullyEvolvedSearch === null || fullyEvolvedSearch !== species.nfe;
+		const fossilSearchResult = fossilSearch === null || fossilSearch === [
+			'omastar', 'kabutops', 'aerodactyl', 'aerodactylmega', 'cradily', 'armaldo', 'relicanth', 'rampardos', 'bastiodon',
+			'carracosta', 'archeops', 'tyrantrum', 'aurorus', 'dracozolt', 'arctozolt', 'dracovish', 'actovish',
+		].includes(species.id);
 		if (
 			species.gen <= mod.gen &&
 			(
@@ -1091,7 +1104,8 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			(!species.tier.startsWith("CAP") || capSearch) &&
 			megaSearchResult &&
 			gmaxSearchResult &&
-			fullyEvolvedSearchResult
+			fullyEvolvedSearchResult &&
+			fossilSearchResult
 		) {
 			dex[species.id] = species;
 		}
