@@ -10,7 +10,7 @@
 import {exec, ExecException, ExecOptions} from 'child_process';
 import {crashlogger, FS} from "../lib";
 
-const MONITOR_CLEAN_TIMEOUT = 2 * 60 * 60 * 1000;
+export const MONITOR_CLEAN_TIMEOUT = 2 * 60 * 60 * 1000;
 
 /**
  * This counts the number of times an action has been committed, and tracks the
@@ -353,5 +353,3 @@ export const Monitor = new class {
 		return hash;
 	}
 };
-
-Monitor.cleanInterval = setInterval(() => Monitor.clean(), MONITOR_CLEAN_TIMEOUT);

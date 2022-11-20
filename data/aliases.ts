@@ -814,7 +814,6 @@ export const Aliases: {[alias: string]: string} = {
 	snips: "Drapion",
 	staka: "Stakataka",
 	steela: "Celesteela",
-	sui: "Suicune",
 	swole: "Buzzwole",
 	talon: "Talonflame",
 	tang: "Tangrowth",

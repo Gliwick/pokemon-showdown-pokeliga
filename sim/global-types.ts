@@ -519,6 +519,7 @@ namespace RandomTeamsTypes {
 		illusion?: number;
 		statusCure?: number;
 		teraBlast?: number;
+		grassyterrain?: boolean;
 	}
 	export interface FactoryTeamDetails {
 		megaCount?: number;
