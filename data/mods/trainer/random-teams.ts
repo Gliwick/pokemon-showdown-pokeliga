@@ -166,7 +166,10 @@ const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 		// Stone Axe
 		'Ingo',
 	],
-	'Master': [],
+	'Master': [
+		// Tidy Up
+		'Kieran',
+	],
 	'Veteran': [
 		// Spikes, Ceaseless Edge
 		'Florian/Juliana',
@@ -225,6 +228,7 @@ const SEASONAL_POKEMON: Record<string, string[]> = {
 	'Aliana/Bryony/Celosia/Mable': ['Malamar'],
 	'Florian/Juliana': ['Dialga', 'Greninja', 'Samurott-Hisui'],
 	'Ingo': ['Samurott-Hisui'],
+	'Kieran': ['Furret'],
 };
 
 export class RandomMTTeams extends RandomTeams {
