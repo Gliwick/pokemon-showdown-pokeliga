@@ -146,7 +146,7 @@ const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 		'Raihan', 'Giovanni', 'Cheren', 'Inver', 'Mustard', 'Alain', 'Dawn', 'Barry', 'Nessa', 'Hilbert/Hilda/Nate/Rosa',
 		'Morimoto', 'Kamado', 'Zisu', 'Nemona', 'Sophocles', 'Goh', 'Victor/Gloria', 'Amarys', 'Roxanne', 'Marina', ' Voldon',
 		// Spikes
-		'Steven', 'Benga', 'Buck', 'Brock', 'Lusamine', 'Lorelei', 'Volo', 'Sashay', 'Miriam', 'Greesix', 'Wakin',
+		'Steven', 'Benga', 'Buck', 'Lusamine', 'Lorelei', 'Volo', 'Sashay', 'Miriam', 'Wakin',
 		// Sticky Web
 		'Janine', 'Lana', 'Katy', 'Carmine', 'Masamune',
 		// Other
