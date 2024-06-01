@@ -27395,6 +27395,7 @@
 	"Roxanne": {
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/9/90/VSRoxanne.png/300px-VSRoxanne.png",
 		"gen": 3,
+		"types": ["Rock"],
 		"essentialPokemon": {
 			"probopass": [
 				{
