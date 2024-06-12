@@ -4002,7 +4002,7 @@
 						"moves": ["Earthquake", "Rock Slide", "Megahorn", "Double-Edge"],
 						"abilities": ["Rock Head"],
 						"items": ["Eviolite"],
-						"level": 51
+						"level": 52
 					}
 				]
 			},
@@ -6632,7 +6632,7 @@
 				},
 				{
 					"species": "Espeon",
-					"moves": ["Psychic", "Shadow Ball", "Alluring Voice", "Morning Sun"],
+					"moves": ["Psychic", "Shadow Ball", "Dazzling Gleam", "Morning Sun"],
 					"abilities": ["Synchronize"],
 					"items": ["Wise Glasses"],
 					"natures": ["Modest"]
@@ -9387,7 +9387,7 @@
 				},
 				{
 					"species": "Espeon",
-					"moves": ["Psychic", "Shadow Ball", "Alluring Voice", "Morning Sun"],
+					"moves": ["Psychic", "Shadow Ball", "Dazzling Gleam", "Morning Sun"],
 					"abilities": ["Synchronize"],
 					"items": ["Wise Glasses"],
 					"natures": ["Modest"]
@@ -11037,7 +11037,7 @@
 			}
 		},
 		"pokemon": {
-			"snorlax": [
+			"normal": [
 				{
 					"species": "Snorlax",
 					"moves": ["Body Slam", "Crunch", "Brick Break", "Curse"],
@@ -11055,13 +11055,21 @@
 					"moves": ["Body Slam", "Crunch", "Brick Break", "Curse"],
 					"abilities": ["Thick Fat"],
 					"items": ["Leftovers"]
+				},
+				{
+					"species": "Blissey",
+					"gender": "F",
+					"moves": ["Flamethrower", "Thunder", "Ice Beam", "Shadow Ball"],
+					"abilities": ["Natural Cure", "Serene Grace"],
+					"items": ["Expert Belt"],
+					"tiers": ["Veteran"]
 				}
 			],
 			"latios": [
 				{
 					"species": "Latios",
 					"gender": "M",
-					"moves": ["Dragon Pulse", "Thunder", "Solar Beam", "Shadow Ball"],
+					"moves": ["Dragon Pulse", "Thunderbolt", "Solar Beam", "Shadow Ball"],
 					"abilities": ["Levitate"],
 					"items": ["Soul Dew"],
 					"required": ["Drought"]
@@ -11073,14 +11081,6 @@
 					"abilities": ["Levitate"],
 					"items": ["Soul Dew"],
 					"incompatible": ["Drought"]
-				},
-				{
-					"species": "Latios",
-					"gender": "M",
-					"moves": ["Dragon Pulse", "Thunderbolt", "Solar Beam", "Shadow Ball"],
-					"abilities": ["Levitate"],
-					"items": ["Soul Dew"],
-					"required": ["Drought"]
 				}
 			],
 			"starter": [
@@ -11104,13 +11104,20 @@
 					"items": ["Quick Claw"]
 				}
 			],
-			"kingler": [
+			"water": [
 				{
 					"species": "Kingler",
 					"moves": ["Crabhammer", "X-Scissor", "Giga Impact", "Protect"],
 					"abilities": ["Hyper Cutter"],
 					"items": ["Quick Claw"],
 					"tiers": ["Veteran"]
+				},
+				{
+					"species": "Manaphy",
+					"moves": ["Take Heart", "Rest", "Ice Beam", "Rain Dance"],
+					"abilities": ["Hydration"],
+					"items": ["Sitrus Berry"],
+					"incompatible": ["Drought"]
 				}
 			],
 			"lucario": [
@@ -11146,37 +11153,12 @@
 					"tiers": ["Veteran"]
 				}
 			],
-			"manaphy": [
-				{
-					"species": "Manaphy",
-					"moves": ["Calm Mind", "Rest", "Ice Beam", "Rain Dance"],
-					"abilities": ["Hydration"],
-					"items": ["Sitrus Berry"],
-					"incompatible": ["Drought"]
-				}
-			],
 			"garchomp": [
 				{
 					"species": "Garchomp",
-					"moves": ["Dragon Claw", "Earthquake", "Aerial Ace", "Brick Break"],
+					"moves": ["Dragon Claw", ["Earthquake", "Stone Edge"], "Aerial Ace", ["Brick Break", "Protect"]],
 					"abilities": ["Sand Veil"],
 					"items": ["Yache Berry"]
-				},
-				{
-					"species": "Garchomp",
-					"moves": ["Dragon Claw", "Stone Edge", "Aerial Ace", "Protect"],
-					"abilities": ["Sand Veil"],
-					"items": ["Yache Berry"]
-				}
-			],
-			"blissey": [
-				{
-					"species": "Blissey",
-					"gender": "F",
-					"moves": ["Flamethrower", "Thunder", "Ice Beam", "Shadow Ball"],
-					"abilities": ["Natural Cure", "Serene Grace"],
-					"items": ["Expert Belt"],
-					"tiers": ["Veteran"]
 				}
 			]
 		}
@@ -13345,7 +13327,7 @@
 				},
 				{
 					"species": "Espeon",
-					"moves": ["Psyshock", "Alluring Voice", "Psychic", "Calm Mind"],
+					"moves": ["Psyshock", "Dazzling Gleam", "Psychic", "Calm Mind"],
 					"abilities": ["Synchronize"],
 					"items": ["Leftovers"]
 				},
@@ -18794,7 +18776,7 @@
 						},
 						{
 							"species": "Espeon",
-							"moves": ["Psychic", "Shadow Ball", "Alluring Voice", "Morning Sun"],
+							"moves": ["Psychic", "Shadow Ball", "Dazzling Gleam", "Morning Sun"],
 							"abilities": ["Magic Bounce"],
 							"items": ["Wise Glasses"],
 							"natures": ["Modest"]
@@ -18892,10 +18874,31 @@
 							"items": ["Silver Powder"],
 							"teraTypes": ["Flying"]
 						}
+					],
+					"metagross": [
+						{
+							"species": "Metagross",
+							"moves": ["Meteor Mash", "Psychic", "Earthquake", "Shadow Ball"],
+							"abilities": ["Clear Body"],
+							"items": ["Quick Claw"]
+						},
+						{
+							"species": "Metagross",
+							"moves": ["Meteor Mash", "Psychic", "Ice Punch", "Thunder Punch"],
+							"abilities": ["Clear Body"],
+							"items": ["Bright Powder"]
+						},
+						{
+							"species": "Metagross",
+							"moves": ["Meteor Mash", "Earthquake", "Brick Break", "Explosion"],
+							"abilities": ["Clear Body"],
+							"items": ["Quick Claw"],
+							"natures": ["Adamant"]
+						}
 					]
 				},
 				"pokemon": {
-					"bird": [
+					"rockx2": [
 						{
 							"species": "Zapdos",
 							"moves": ["Thunderbolt", "Drill Peck", "Thunder Wave", "Roar"],
@@ -18937,6 +18940,126 @@
 							"moves": ["Fire Blast", "Sunny Day", "Double Team", "Rest"],
 							"abilities": ["Pressure"],
 							"items": ["Chesto Berry"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Entei",
+							"moves": ["Flamethrower", "Double Team", "Calm Mind", "Rest"],
+							"abilities": ["Pressure"],
+							"items": ["Chesto Berry"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Entei",
+							"moves": ["Fire Blast", "Sunny Day", "Solar Beam", "Reflect"],
+							"abilities": ["Pressure"],
+							"items": ["Bright Powder"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Entei",
+							"moves": ["Flamethrower", "Double-Edge", "Swagger", "Psych Up"],
+							"abilities": ["Pressure"],
+							"items": ["Lum Berry"]
+						},
+						{
+							"species": "Entei",
+							"moves": ["Flamethrower", "Crunch", "Double Team", "Reflect"],
+							"abilities": ["Pressure"],
+							"items": ["King's Rock"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Entei",
+							"moves": ["Fire Blast", "Double-Edge", "Endure", "Reflect"],
+							"abilities": ["Pressure"],
+							"items": ["Salac Berry"]
+						},
+						{
+							"species": "Entei",
+							"moves": ["Flamethrower", "Calm Mind", "Roar", "Rest"],
+							"abilities": ["Pressure"],
+							"items": ["Chesto Berry"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Dragonite",
+							"moves": ["Outrage", "Double-Edge", "Thunder Wave", "Roar"],
+							"abilities": ["Inner Focus"],
+							"items": ["Lum Berry"]
+						},
+						{
+							"species": "Dragonite",
+							"moves": ["Dragon Pulse", "Thunderbolt", "Surf", "Flamethrower"],
+							"abilities": ["Inner Focus"],
+							"items": ["Shell Bell"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Dragonite",
+							"moves": ["Dragon Pulse", "Thunderbolt", "Surf", "Ice Beam"],
+							"abilities": ["Inner Focus"],
+							"items": ["Shell Bell"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Dragonite",
+							"moves": ["Dragon Pulse", "Flamethrower", "Ice Beam", "Brick Break"],
+							"abilities": ["Inner Focus"],
+							"items": ["Shell Bell"],
+							"natures": ["Modest"]
+						},
+						{
+							"species": "Regice",
+							"moves": ["Ice Beam", "Thunderbolt", "Amnesia", "Rest"],
+							"abilities": ["Clear Body"],
+							"items": ["Chesto Berry"],
+							"natures": ["Modest"],
+							"incompatible": ["Registeel"]
+						},
+						{
+							"species": "Regice",
+							"moves": ["Ice Beam", "Thunderbolt", "Thunder Wave", "Explosion"],
+							"abilities": ["Clear Body"],
+							"items": ["Lum Berry"],
+							"natures": ["Quiet"],
+							"incompatible": ["Registeel"]
+						},
+						{
+							"species": "Regice",
+							"moves": ["Ice Beam", "Snowscape", "Double Team", "Thunder Wave"],
+							"abilities": ["Clear Body"],
+							"items": ["Leftovers"],
+							"natures": ["Bold"],
+							"incompatible": ["Registeel"]
+						},
+						{
+							"species": "Regice",
+							"moves": ["Ice Beam", "Thunderbolt", "Sleep Talk", "Rest"],
+							"abilities": ["Clear Body"],
+							"items": ["Chesto Berry"],
+							"natures": ["Modest"],
+							"incompatible": ["Registeel"]
+						},
+						{
+							"species": "Salamence",
+							"moves": ["Double-Edge", "Earthquake", "Dual Wingbeat", "Dragon Dance"],
+							"abilities": ["Intimidate"],
+							"items": ["Bright Powder"],
+							"natures": ["Adamant"]
+						},
+						{
+							"species": "Salamence",
+							"moves": ["Double-Edge", "Dual Wingbeat", "Crunch", "Dragon Dance"],
+							"abilities": ["Intimidate"],
+							"items": ["Lum Berry"],
+							"natures": ["Adamant"]
+						},
+						{
+							"species": "Salamence",
+							"moves": ["Flamethrower", "Dragon Pulse", "Crunch", "Brick Break"],
+							"abilities": ["Intimidate"],
+							"items": ["Lum Berry"],
 							"natures": ["Modest"]
 						}
 					],
@@ -19017,75 +19140,6 @@
 							"abilities": ["Pressure"],
 							"items": ["Chesto Berry"],
 							"natures": ["Modest"]
-						},
-						{
-							"species": "Entei",
-							"moves": ["Flamethrower", "Double Team", "Calm Mind", "Rest"],
-							"abilities": ["Pressure"],
-							"items": ["Chesto Berry"],
-							"natures": ["Modest"]
-						},
-						{
-							"species": "Entei",
-							"moves": ["Fire Blast", "Sunny Day", "Solar Beam", "Reflect"],
-							"abilities": ["Pressure"],
-							"items": ["Bright Powder"],
-							"natures": ["Modest"]
-						},
-						{
-							"species": "Entei",
-							"moves": ["Flamethrower", "Double-Edge", "Swagger", "Psych Up"],
-							"abilities": ["Pressure"],
-							"items": ["Lum Berry"]
-						},
-						{
-							"species": "Entei",
-							"moves": ["Flamethrower", "Crunch", "Double Team", "Reflect"],
-							"abilities": ["Pressure"],
-							"items": ["King's Rock"],
-							"natures": ["Modest"]
-						},
-						{
-							"species": "Entei",
-							"moves": ["Fire Blast", "Double-Edge", "Endure", "Reflect"],
-							"abilities": ["Pressure"],
-							"items": ["Salac Berry"]
-						},
-						{
-							"species": "Entei",
-							"moves": ["Flamethrower", "Calm Mind", "Roar", "Rest"],
-							"abilities": ["Pressure"],
-							"items": ["Chesto Berry"],
-							"natures": ["Modest"]
-						}
-					],
-					"dragonite": [
-						{
-							"species": "Dragonite",
-							"moves": ["Outrage", "Double-Edge", "Thunder Wave", "Roar"],
-							"abilities": ["Inner Focus"],
-							"items": ["Lum Berry"]
-						},
-						{
-							"species": "Dragonite",
-							"moves": ["Dragon Pulse", "Thunderbolt", "Surf", "Flamethrower"],
-							"abilities": ["Inner Focus"],
-							"items": ["Shell Bell"],
-							"natures": ["Modest"]
-						},
-						{
-							"species": "Dragonite",
-							"moves": ["Dragon Pulse", "Thunderbolt", "Surf", "Ice Beam"],
-							"abilities": ["Inner Focus"],
-							"items": ["Shell Bell"],
-							"natures": ["Modest"]
-						},
-						{
-							"species": "Dragonite",
-							"moves": ["Dragon Pulse", "Flamethrower", "Ice Beam", "Brick Break"],
-							"abilities": ["Inner Focus"],
-							"items": ["Shell Bell"],
-							"natures": ["Modest"]
 						}
 					],
 					"regi": [
@@ -19094,35 +19148,8 @@
 							"moves": ["Iron Head", "Curse", "Amnesia", "Rest"],
 							"abilities": ["Clear Body"],
 							"items": ["Chesto Berry"],
-							"natures": ["Adamant"]
-						},
-						{
-							"species": "Regice",
-							"moves": ["Ice Beam", "Thunderbolt", "Amnesia", "Rest"],
-							"abilities": ["Clear Body"],
-							"items": ["Chesto Berry"],
-							"natures": ["Modest"]
-						},
-						{
-							"species": "Regice",
-							"moves": ["Ice Beam", "Thunderbolt", "Thunder Wave", "Explosion"],
-							"abilities": ["Clear Body"],
-							"items": ["Lum Berry"],
-							"natures": ["Quiet"]
-						},
-						{
-							"species": "Regice",
-							"moves": ["Ice Beam", "Snowscape", "Double Team", "Thunder Wave"],
-							"abilities": ["Clear Body"],
-							"items": ["Leftovers"],
-							"natures": ["Bold"]
-						},
-						{
-							"species": "Regice",
-							"moves": ["Ice Beam", "Thunderbolt", "Sleep Talk", "Rest"],
-							"abilities": ["Clear Body"],
-							"items": ["Chesto Berry"],
-							"natures": ["Modest"]
+							"natures": ["Adamant"],
+							"incompatible": ["Regice"]
 						},
 						{
 							"species": "Regirock",
@@ -19325,50 +19352,6 @@
 							"abilities": ["Sand Stream"],
 							"items": ["Lum Berry"],
 							"natures": ["Adamant"]
-						}
-					],
-					"metagross": [
-						{
-							"species": "Metagross",
-							"moves": ["Meteor Mash", "Psychic", "Earthquake", "Shadow Ball"],
-							"abilities": ["Clear Body"],
-							"items": ["Quick Claw"]
-						},
-						{
-							"species": "Metagross",
-							"moves": ["Meteor Mash", "Psychic", "Ice Punch", "Thunder Punch"],
-							"abilities": ["Clear Body"],
-							"items": ["Bright Powder"]
-						},
-						{
-							"species": "Metagross",
-							"moves": ["Meteor Mash", "Earthquake", "Brick Break", "Explosion"],
-							"abilities": ["Clear Body"],
-							"items": ["Quick Claw"],
-							"natures": ["Adamant"]
-						}
-					],
-					"salamence": [
-						{
-							"species": "Salamence",
-							"moves": ["Double-Edge", "Earthquake", "Dual Wingbeat", "Dragon Dance"],
-							"abilities": ["Intimidate"],
-							"items": ["Bright Powder"],
-							"natures": ["Adamant"]
-						},
-						{
-							"species": "Salamence",
-							"moves": ["Double-Edge", "Dual Wingbeat", "Crunch", "Dragon Dance"],
-							"abilities": ["Intimidate"],
-							"items": ["Lum Berry"],
-							"natures": ["Adamant"]
-						},
-						{
-							"species": "Salamence",
-							"moves": ["Flamethrower", "Dragon Pulse", "Crunch", "Brick Break"],
-							"abilities": ["Intimidate"],
-							"items": ["Lum Berry"],
-							"natures": ["Modest"]
 						}
 					]
 				}
@@ -22293,7 +22276,7 @@
 			"staraptor": [
 				{
 					"species": "Staraptor",
-					"moves": ["Facade", "Brave Bird", "U-turn", "Protect"],
+					"moves": ["Double-Edge", "Brave Bird", "U-turn", "Protect"],
 					"abilities": ["Intimidate"],
 					"items": ["Focus Sash"]
 				}
@@ -22306,6 +22289,13 @@
 					"moves": ["Flare Blitz", "Crunch", "Extreme Speed", "Protect"],
 					"abilities": ["Flash Fire"],
 					"items": ["Passho Berry"]
+				},
+				{
+					"species": "Blaziken",
+					"gender": "M",
+					"moves": ["Sky Uppercut", "Flamethrower", "Rock Slide", "Shadow Claw"],
+					"abilities": ["Blaze"],
+					"items": ["Payapa Berry"]
 				},
 				{
 					"species": "Infernape",
@@ -22342,7 +22332,20 @@
 					"items": ["Light Ball"]
 				}
 			],
-			"ursaring": [
+			"normal": [
+				{
+					"species": "Ambipom",
+					"moves": ["Double Hit", "Shadow Claw", "Thunder Wave", "Protect"],
+					"abilities": ["Technician"],
+					"items": ["King's Rock"]
+				},
+				{
+					"species": "Tauros",
+					"gender": "M",
+					"moves": ["Double-Edge", "Zen Headbutt", "Giga Impact", "Protect"],
+					"abilities": ["Intimidate"],
+					"items": ["Sitrus Berry"]
+				},
 				{
 					"species": "Ursaring",
 					"gender": "M",
@@ -22820,7 +22823,7 @@
 					"name": "Quaking Earth Titan",
 					"species": "Iron Treads",
 					"moves": [["Heavy Slam", "Iron Head"], ["Earthquake", "Stomping Tantrum"], "Knock Off", ["Wild Charge", "Rapid Spin"]],
-					"abilities": ["Protosynthesis"],
+					"abilities": ["Quark Drive"],
 					"natures": ["Naughty"]
 				}
 			]
@@ -22861,7 +22864,7 @@
 					"name": "Quaking Earth Titan",
 					"species": "Iron Treads",
 					"moves": [["Heavy Slam", "Iron Head"], ["Earthquake", "Stomping Tantrum"], "Knock Off", ["Wild Charge", "Rapid Spin"]],
-					"abilities": ["Protosynthesis"],
+					"abilities": ["Quark Drive"],
 					"natures": ["Naughty"]
 				}
 			]
@@ -25220,6 +25223,14 @@
 					"abilities": ["Immunity", "Thick Fat"],
 					"items": ["Leftovers"]
 				}
+			],
+			"mesprit": [
+				{
+					"species": "Mesprit",
+					"moves": ["Psychic", "Shadow Ball", "Thunderbolt", "Ice Beam"],
+					"abilities": ["Levitate"],
+					"items": ["Expert Belt"]
+				}
 			]
 		},
 		"pokemon": {
@@ -27254,125 +27265,6 @@
 			]
 		}
 	},
-	"Roxanne": {
-		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/9/90/VSRoxanne.png/300px-VSRoxanne.png",
-		"gen": 3,
-		"types": ["Rock"],
-		"essentialPokemon": {
-			"probopass": [
-				{
-					"species": "Probopass",
-					"moves": ["Sandstorm", "Power Gem", "Flash Cannon", "Thunder Wave"],
-					"abilities": ["Sturdy", "Magnet Pull"],
-					"items": ["Shuca Berry"]
-				},
-				{
-					"species": "Probopass",
-					"moves": ["Pain Split", "Power Gem", "Earth Power", "Thunderbolt"],
-					"abilities": ["Sturdy", "Magnet Pull"],
-					"items": ["Air Balloon"]
-				}
-			],
-			"water/rock": [
-				{
-					"species": "Relicanth",
-					"moves": ["Amnesia", "Yawn", "Aqua Tail", "Stone Edge"],
-					"abilities": ["Swift Swim"],
-					"items": ["Rindo Berry"]
-				},
-				{
-					"species": "Carracosta",
-					"moves": ["Shell Smash", "Rock Slide", "Aqua Jet", "Waterfall"],
-					"abilities": ["Solid Rock", "Sturdy"],
-					"items": ["Mystic Water"],
-					"teraTypes": ["Water"]
-				},
-				{
-					"species": "Kabutops",
-					"gender": "M",
-					"moves": ["Swords Dance", "Ice Beam", "Aqua Tail", "Rock Slide"],
-					"abilities": ["Battle Armor"],
-					"items": ["Sitrus Berry"]
-				}
-			],
-			"steelix": [
-				{
-					"species": "Steelix",
-					"gender": "M",
-					"moves": ["Iron Tail", "Explosion", "Roar", "Rock Slide"],
-					"abilities": ["Rock Head"]
-				}
-			],
-			"runerigus": [
-				{
-					"species": "Runerigus",
-					"moves": ["Sand Tomb", "Bulldoze", "Shadow Claw", "Phantom Force"],
-					"abilities": ["Wandering Spirit"],
-					"items": ["Soft Sand"],
-					"teraTypes": ["Ground"]
-				}
-			]
-		},
-		"pokemon": {
-			"armaldo": [
-				{
-					"species": "Armaldo",
-					"moves": ["Curse", "Aqua Tail", "X-Scissor", "Stone Edge"],
-					"abilities": ["Battle Armor"],
-					"items": ["Liechi Berry"]
-				},
-				{
-					"species": "Armaldo",
-					"moves": ["Rock Polish", "Earthquake", "X-Scissor", "Rock Slide"],
-					"abilities": ["Battle Armor"],
-					"items": ["Lum Berry"]
-				}
-			],
-			"cradily": [
-				{
-					"species": "Cradily",
-					"moves": ["Ancient Power", "Giga Drain", "Stockpile", "Stealth Rock"],
-					"abilities": ["Suction Cups"],
-					"items": ["Sitrus Berry"]
-				},
-				{
-					"species": "Cradily",
-					"moves": ["Rock Slide", "Giga Drain", "Amnesia", "Toxic"],
-					"abilities": ["Suction Cups"],
-					"items": ["Leftovers"]
-				}
-			],
-			"aggron": [
-				{
-					"species": "Aggron",
-					"moves": ["Iron Tail", "Stone Edge", "Outrage", "Thunder Wave"],
-					"abilities": ["Sturdy"],
-					"items": ["Chople Berry"]
-				},
-				{
-					"species": "Aggron",
-					"moves": ["Metal Burst", "Avalanche", "Iron Head", "Head Smash"],
-					"abilities": ["Sturdy", "Rock Head"],
-					"items": ["Focus Sash"]
-				}
-			],
-			"golem": [
-				{
-					"species": "Golem",
-					"moves": ["Rock Slide", "Iron Head", "Double-Edge", "Rock Polish"],
-					"abilities": ["Rock Head", "Sturdy"],
-					"items": ["Salac Berry"]
-				},
-				{
-					"species": "Golem",
-					"moves": ["Focus Punch", "Fire Punch", "Earthquake", "Protect"],
-					"abilities": ["Sturdy"],
-					"items": ["Soft Sand"],
-					"teraTypes": ["Ground"]
-				}
-			]
-		}
-	},
 	"Wallace": {
 		"sprite": [
 			{
@@ -28802,6 +28694,25 @@
 					"items": ["Leftovers"]
 				}
 			],
+			"ambipom": [
+				{
+					"species": "Ambipom",
+					"moves": ["Double Hit", "Iron Tail", "Shadow Claw", "Fake Out"],
+					"abilities": ["Technician"],
+					"items": ["Persim Berry"]
+				}
+			],
+			"garchomp": [
+				{
+					"species": "Garchomp",
+					"gender": "F",
+					"moves": ["Dragon Claw", ["Earthquake", "Stone Edge"], "Aerial Ace", ["Brick Break", "Protect"]],
+					"abilities": ["Sand Veil"],
+					"items": ["Yache Berry"]
+				}
+			]
+		},
+		"pokemon": {
 			"corsola": [
 				{
 					"species": "Corsola",
@@ -28810,16 +28721,6 @@
 					"items": ["Scope Lens"]
 				}
 			],
-			"ambipom": [
-				{
-					"species": "Ambipom",
-					"moves": ["Double Hit", "Iron Tail", "Shadow Claw", "Fake Out"],
-					"abilities": ["Technician"],
-					"items": ["Persim Berry"]
-				}
-			]
-		},
-		"pokemon": {
 			"azumarill": [
 				{
 					"species": "Azumarill",
@@ -28836,12 +28737,19 @@
 					"abilities": ["Water Absorb"]
 				}
 			],
-			"milotic": [
+			"water": [
 				{
 					"species": "Milotic",
 					"gender": "M",
 					"moves": ["Ice Beam", "Aqua Ring", "Hydro Pump", "Alluring Voice"],
-					"abilities": ["Marvel Scale"]
+					"abilities": ["Marvel Scale"],
+					"items": ["Zoom Lens"]
+				},
+				{
+					"species": "Suicune",
+					"moves": ["Surf", "Ice Beam", "Calm Mind", "Protect"],
+					"abilities": ["Pressure"],
+					"items": ["Leftovers"]
 				}
 			]
 		}
@@ -28944,7 +28852,26 @@
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/b/b4/Terrel.png/75px-Terrel.png",
 		"gen": 4,
 		"game": "Battle Revolution",
+		"tiers": ["Uber", "Veteran"],
 		"types": ["Fire"],
+		"essentialByTier": {
+			"Uber": {
+				"mascot": [
+					{
+						"species": "Ho-Oh",
+						"moves": ["Sacred Fire", "Sky Attack", "Earthquake", "Sunny Day"],
+						"abilities": ["Pressure"],
+						"items": ["Power Herb"]
+					},
+					{
+						"species": "Giratina",
+						"moves": ["Shadow Force", "Will-O-Wisp", "Earth Power", "Double Team"],
+						"abilities": ["Pressure"],
+						"items": ["Leftovers"]
+					}
+				]
+			}
+		},
 		"essentialPokemon": {
 			"torkoal": [
 				{
@@ -28982,18 +28909,18 @@
 		"pokemon": {
 			"fire": [
 				{
-					"species": "Flareon",
-					"moves": ["Tera Blast", "Attract", "Sand-Attack", "Fire Fang"],
-					"abilities": ["Flash Fire"],
-					"items": ["Black Glasses"],
-					"teraTypes": ["Dark"]
-				},
-				{
 					"species": "Typhlosion",
 					"gender": "M",
 					"moves": ["Flare Blitz", "Crush Claw", "Brick Break", "Aerial Ace"],
 					"abilities": ["Blaze"],
 					"items": ["Muscle Band"]
+				},
+				{
+					"species": "Entei",
+					"moves": ["Lava Plume", "Extrasensory", "Tera Blast", "Protect"],
+					"abilities": ["Pressure"],
+					"items": ["Sitrus Berry"],
+					"teraTypes": ["Ground"]
 				}
 			],
 			"altaria": [
@@ -29018,7 +28945,8 @@
 					"gender": "M",
 					"moves": ["Flamethrower", "Sunny Day", "Ancient Power", "Will-O-Wisp"],
 					"abilities": ["Blaze"],
-					"items": ["Wise Glasses"]
+					"items": ["Wise Glasses"],
+					"incompatible": ["Ho-Oh"]
 				}
 			],
 			"infernape": [
@@ -29045,6 +28973,40 @@
 					"moves": ["Knock Off", "Sand Attack", "Defog", "Skitter Smack"],
 					"abilities": ["Hyper Cutter", "Sand Veil"],
 					"items": ["Eviolite"]
+				}
+			],
+			"lati": [
+				{
+					"species": "Latias",
+					"gender": "F",
+					"moves": ["Psychic", "Dragon Pulse", "Shadow Ball", "Protect"],
+					"abilities": ["Levitate"],
+					"items": ["Soul Dew"]
+				},
+				{
+					"species": "Latios",
+					"gender": "M",
+					"moves": ["Dragon Pulse", "Thunderbolt", "Solar Beam", "Shadow Ball"],
+					"abilities": ["Levitate"],
+					"items": ["Soul Dew"]
+				}
+			],
+			"garchomp": [
+				{
+					"species": "Garchomp",
+					"gender": "F",
+					"moves": ["Dragon Claw", ["Earthquake", "Stone Edge"], "Aerial Ace", ["Brick Break", "Protect"]],
+					"abilities": ["Sand Veil"],
+					"items": ["Yache Berry"]
+				}
+			],
+			"heatran": [
+				{
+					"species": "Heatran",
+					"gender": "F",
+					"moves": ["Magma Storm", "Flash Cannon", "Explosion", "Protect"],
+					"abilities": ["Flash Fire"],
+					"items": ["Focus Sash"]
 				}
 			]
 		}

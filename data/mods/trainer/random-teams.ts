@@ -144,7 +144,7 @@ const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 		'Thorton', 'Noland',
 		// Stealth Rock
 		'Raihan', 'Giovanni', 'Cheren', 'Inver', 'Mustard', 'Alain', 'Dawn', 'Barry', 'Nessa', 'Hilbert/Hilda/Nate/Rosa',
-		'Morimoto', 'Kamado', 'Zisu', 'Nemona', 'Sophocles', 'Goh', 'Victor/Gloria', 'Amarys', 'Roxanne', 'Marina', ' Voldon',
+		'Morimoto', 'Kamado', 'Zisu', 'Nemona', 'Sophocles', 'Goh', 'Victor/Gloria', 'Amarys', 'Marina', ' Voldon',
 		// Spikes
 		'Steven', 'Benga', 'Buck', 'Lusamine', 'Lorelei', 'Volo', 'Sashay', 'Miriam', 'Wakin',
 		// Sticky Web
@@ -210,12 +210,13 @@ const SEASONAL_POKEMON: Record<string, string[]> = {
 	'Zisu': ['Steelix'],
 	'Goh': ['Cursola'],
 	'Victor/Gloria': ['Duraludon'],
-	'Roxanne': ['Cradily'],
+	'Marina': ['Corsola'],
 	'Steven': ['Skarmory'],
 	'Lorelei': ['Cloyster'],
 	'Volo': ['Roserade'],
+	'Carmine': ['Leavanny'],
 	'Rei/Akari': ['Samurott-Hisui'],
-	'Tierno': ['Blsstoise'],
+	'Tierno': ['Blastoise'],
 	'Sada': ['Great Tusk'],
 	'Turo': ['Iron Treads'],
 	'Maiko': ['Hitmontop'],
