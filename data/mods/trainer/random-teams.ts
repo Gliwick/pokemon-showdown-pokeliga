@@ -553,7 +553,6 @@ export class RandomMTTeams extends RandomTeams {
 				this.filterIfNotEmpty(trainer.teams, team => filterSeasonalTeams(id, team, tier, false)) :
 				[trainer]
 			).filter(pokemonTeam => ((pokemonTeam.tiers || ['Veteran']).includes(tier)));
-			console.log(trainer.teams, pokemonTeams);
 			const pokemonTeam = this.sample(pokemonTeams);
 
 			let sprite: Sprite;
