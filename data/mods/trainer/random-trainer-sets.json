@@ -14352,7 +14352,7 @@
 				{
 					"species": "Piloswine",
 					"gender": "M",
-					"moves": ["Earthquake", "Blizzard", "Double-Edge", "Rock Slide"],
+					"moves": ["Earthquake", "Icicle Crash", "Double-Edge", "Rock Slide"],
 					"abilities": ["Oblivious"],
 					"items": ["Eviolite"]
 				}
