@@ -5191,9 +5191,31 @@
 		}
 	},
 	"Cheren": {
-		"sprite": "https://cdn2.bulbagarden.net/upload/7/75/VSCheren_2.png",
+		"sprite": [
+			{
+				"id": "REGULAR",
+				"link": "https://cdn2.bulbagarden.net/upload/7/75/VSCheren_2.png"
+			},
+			{
+				"id": "Champion",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/2/2b/VSCheren_Champion_Masters.png/180px-VSCheren_Champion_Masters.png"
+			}
+		],
 		"gen": 5,
 		"types": ["Normal"],
+		"essentialBySprite": {
+			"Champion": {
+				"tornadus": [
+					{
+						"species": "Tornadus",
+						"gender": "M",
+						"moves": ["Bleakwind Storm", "Fly", "Hammer Arm", "Icy Wind"],
+						"abilities": ["Prankster"],
+						"items": ["Sharp Beak"]
+					}
+				]
+			}
+		},
 		"essentialPokemon": {
 			"stoutland": [
 				{
@@ -5251,15 +5273,13 @@
 					"species": "Castform",
 					"moves": ["Weather Ball", "Hydro Pump", "Fire Blast", "Blizzard"],
 					"abilities": ["Forecast"],
-					"items": ["Petaya Berry"],
-					"level": 50
+					"items": ["Petaya Berry"]
 				},
 				{
 					"species": "Castform",
 					"moves": ["Weather Ball", "Ice Beam", "Rain Dance", "Thunder"],
 					"abilities": ["Forecast"],
 					"items": ["Lum Berry"],
-					"level": 50,
 					"teraTypes": ["Water"]
 				}
 			],
@@ -5363,9 +5383,32 @@
 		}
 	},
 	"Bianca": {
-		"sprite": "https://cdn2.bulbagarden.net/upload/1/10/VSBianca.png",
+		"sprite": [
+			{
+				"id": "REGULAR",
+				"link": "https://cdn2.bulbagarden.net/upload/1/10/VSBianca.png",
+				"tiers": ["Ace"]
+			},
+			{
+				"id": "Champion",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/1/1b/VSBianca_Champion_Masters.png/180px-VSBianca_Champion_Masters.png",
+				"tiers": ["Veteran"]
+			}
+		],
 		"gen": 5,
-		"tiers": ["Ace"],
+		"tiers": ["Veteran", "Ace"],
+		"essentialBySprite": {
+			"Champion": {
+				"virizion": [
+					{
+						"species": "Virizion",
+						"moves": ["Sacred Sword", "Swords Dance", "Leaf Blade", "Stone Edge"],
+						"abilities": ["Justified"],
+						"items": ["Black Belt"]
+					}
+				]
+			}
+		},
 		"essentialPokemon": {
 			"musharna": [
 				{
@@ -22843,6 +22886,30 @@
 			}
 		],
 		"gen": 9,
+		"essentialBySprite": {
+			"Scarlet": {
+				"titan": [
+					{
+						"name": "Quaking Earth Titan",
+						"species": "Great Tusk",
+						"moves": [["Giga Impact", "Rapid Spin"], ["Earthquake", "Stomping Tantrum"], "Knock Off", ["Brick Break", "Close Combat"]],
+						"abilities": ["Protosynthesis"],
+						"natures": ["Naughty"]
+					}
+				]
+			},
+			"Violet": {
+				"titan": [
+					{
+						"name": "Quaking Earth Titan",
+						"species": "Iron Treads",
+						"moves": [["Heavy Slam", "Iron Head"], ["Earthquake", "Stomping Tantrum"], "Knock Off", ["Wild Charge", "Rapid Spin"]],
+						"abilities": ["Quark Drive"],
+						"natures": ["Naughty"]
+					}
+				]
+			}
+		},
 		"essentialPokemon": {
 			"mabosstiff": [
 				{
@@ -22852,20 +22919,20 @@
 					"abilities": ["Intimidate"]
 				}
 			],
-			"titan": [
+			"scovillain": [
 				{
-					"name": "Quaking Earth Titan",
-					"species": "Great Tusk",
-					"moves": [["Giga Impact", "Rapid Spin"], ["Earthquake", "Stomping Tantrum"], "Knock Off", ["Brick Break", "Close Combat"]],
-					"abilities": ["Protosynthesis"],
-					"natures": ["Naughty"]
-				},
+					"species": "Scovillain",
+					"gender": "F",
+					"moves": ["Fire Blast", "Energy Ball", "Zen Headbutt", "Crunch"],
+					"abilities": ["Chlorophyll"]
+				}
+			],
+			"toedscruel": [
 				{
-					"name": "Quaking Earth Titan",
-					"species": "Iron Treads",
-					"moves": [["Heavy Slam", "Iron Head"], ["Earthquake", "Stomping Tantrum"], "Knock Off", ["Wild Charge", "Rapid Spin"]],
-					"abilities": ["Quark Drive"],
-					"natures": ["Naughty"]
+					"species": "Toedscruel",
+					"gender": "F",
+					"moves": ["Power Whip", "Earth Power", "Spore", "Sludge Bomb"],
+					"abilities": ["Mycelium Might"]
 				}
 			]
 		},
@@ -22892,22 +22959,6 @@
 					"gender": "M",
 					"moves": ["Rock Blast", "Icicle Spear", "Liquidation", "Light Screen"],
 					"abilities": ["Skill Link"]
-				}
-			],
-			"scovillain": [
-				{
-					"species": "Scovillain",
-					"gender": "F",
-					"moves": ["Fire Blast", "Energy Ball", "Zen Headbutt", "Crunch"],
-					"abilities": ["Chlorophyll"]
-				}
-			],
-			"toedscruel": [
-				{
-					"species": "Toedscruel",
-					"gender": "F",
-					"moves": ["Power Whip", "Earth Power", "Spore", "Sludge Bomb"],
-					"abilities": ["Mycelium Might"]
 				}
 			],
 			"garganacl": [
@@ -23369,6 +23420,13 @@
 					"moves": ["Tera Blast", "Toxic", "Power Gem", "Sludge Wave"],
 					"abilities": ["Corrosion"],
 					"natures": ["Modest"],
+					"teraTypes": ["Psychic"]
+				},
+				{
+					"species": "Glimmora",
+					"gender": "M",
+					"moves": ["Tera Blast", "Sludge Wave", "Earth Power", "Dazzling Gleam"],
+					"abilities": ["Toxic Debris"],
 					"teraTypes": ["Psychic"]
 				},
 				{
@@ -23861,7 +23919,7 @@
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/a/aa/VSSophocles.png/150px-VSSophocles.png",
 		"gen": 7,
 		"tiers": ["Uber"],
-		"types": ["Electric"],
+		"types": ["Electric", "Steel"],
 		"essentialPokemon": {
 			"togedemaru": [
 				{
@@ -23912,7 +23970,9 @@
 					"teraTypes": ["Ground"],
 					"aura": {"atk":1, "def":1, "spa":1, "spd":1, "spe":1}
 				}
-			],
+			]
+		},
+		"pokemon": {
 			"golem": [
 				{
 					"species": "Golem-Alola",
@@ -23945,9 +24005,7 @@
 					"moves": ["Stealth Rock", "Steel Wing", "Tailwind", "Torment"],
 					"abilities": ["Sturdy"]
 				}
-			]
-		},
-		"pokemon": {
+			],
 			"electivire": [
 				{
 					"species": "Electivire",
