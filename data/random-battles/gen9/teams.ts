@@ -1593,7 +1593,7 @@ export class RandomTeams {
 
 	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./sets.json');
 	randomDoublesSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./doubles-sets.json');
-	oldRandomData: {[species: string]: OldRandomBattleSpecies} = require('./mods/gen8/random-data.json');
+	oldRandomData: {[species: string]: OldRandomBattleSpecies} = require('../gen8/data.json');
 
 	randomTeam() {
 		this.enforceNoDirectCustomBanlistChanges();
