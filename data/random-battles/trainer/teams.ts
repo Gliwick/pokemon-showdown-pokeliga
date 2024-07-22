@@ -250,6 +250,7 @@ const SEASONAL_POKEMON: Record<string, string[]> = {
 	'Sordward/Shielbert': ['Falinks', 'Klinklang'],
 	'Sina': ['Lilligant'],
 	'Alder': ['Krookodile'],
+	// Infernape to prevent Torterra (3 grasses)
 	'Dawn': ['Infernape', 'Wormadam', 'Bellossom'],
 	'Erika': ['Lilligant'],
 	'Ingo': ['Klinklang', 'Wyrdeer'],

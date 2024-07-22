@@ -5728,7 +5728,7 @@
 			}
 		],
 		"gen": 7,
-		"tiers": ["Veteran", "Ace"],
+		"tiers": ["Uber", "Veteran", "Ace"],
 		"essentialBySprite": {
 			"Sygna": {
 				"legendary": [
