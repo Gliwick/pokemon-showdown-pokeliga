@@ -189,6 +189,8 @@ const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 		'Ingo',
 		// Beast Boost
 		'Hau',
+		// Moxie and variations
+		'Leon', 'Gladion',
 	],
 	'Master': [
 		// Clangorous Soul
