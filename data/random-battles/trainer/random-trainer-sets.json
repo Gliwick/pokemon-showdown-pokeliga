@@ -12108,7 +12108,7 @@
 				"name": "Brendan"
 			},
 			{
-				"id": "Sygna",
+				"id": "Brendan Sygna",
 				"link": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/VSBrendan_Sygna_Masters.png/120px-VSBrendan_Sygna_Masters.png",
 				"name": "Brendan",
 				"tiers": ["Veteran"]
@@ -12121,13 +12121,13 @@
 				"tiers": ["Veteran"]
 			},
 			{
-				"id": "Anime",
+				"id": "May Anime",
 				"link": "https://www.serebii.net/anime/pictures/kanto/450/AG178.jpg",
 				"tiers": ["Ace"],
 				"name": "May"
 			},
 			{
-				"id": "Anniversary",
+				"id": "May Anniversary",
 				"link": "https://archives.bulbagarden.net/media/upload/thumb/d/d7/VSMay_Anniversary_2022_Masters.png/120px-VSMay_Anniversary_2022_Masters.png",
 				"tiers": ["Veteran"],
 				"name": "May"
@@ -12137,7 +12137,7 @@
 		"link": "Player_character",
 		"tiers": ["Veteran", "Ace"],
 		"essentialBySprite": {
-			"Sygna": {
+			"Brendan Sygna": {
 				"lati": [
 					{
 						"species": "Latios",
@@ -12149,7 +12149,7 @@
 					}
 				]
 			},
-			"Anime":{
+			"May Anime":{
 				"starter": [
 					{
 						"species": "Blaziken",
@@ -12159,7 +12159,7 @@
 					}
 				]
 			},
-			"Anniversary": {
+			"May Anniversary": {
 				"lati": [
 					{
 						"species": "Latias",

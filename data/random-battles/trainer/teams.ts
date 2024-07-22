@@ -189,8 +189,6 @@ const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 		'Ingo',
 		// Beast Boost
 		'Hau',
-		// Moxie and variations
-		'Leon', 'Gladion', 'Victor/Gloria',
 	],
 	'Master': [
 		// Clangorous Soul
@@ -221,9 +219,11 @@ const SEASONAL_SPRITES: Record<string, string[]> = {
 	'Hilbert/Hilda/Nate/Rosa': ['Hilda', 'Hilda Special', 'Hilda Summer', 'Rosa', 'Rosa Special'],
 	'Guzma': ['Special'],
 	'Lusamine': ['Nihilego'],
+	// disallow GO
 	'Giovanni': ['REGULAR', 'Rainbow', 'Anime'],
 	'Leon': ['Holiday'],
-	'Victor/Gloria': ['Victor Uber'],
+	'Victor/Gloria': ['Victor', 'Victor Uber'],
+	// disallow Anime
 	'Brendan/May': ['Brendan', 'May'],
 };
 const filterSeasonalSprites = (sprite: Sprite, trainerId: string, tier: Tier): boolean => (
@@ -240,11 +240,11 @@ const SEASONAL_POKEMON: Record<string, string[]> = {
 	'Lucas': ['Dudunsparce', 'Mothim'],
 	'Cilan': ['Maractus', 'Lilligant'],
 	'Sawyer': ['Slurpuff'],
-	'Shauna': ['Slurpuff'],
+	'Shauna': ['Slurpuff', 'Gothitelle'],
 	'Turo': ['Iron Moth'],
 	'Lysandre': ['Xerneas'],
 	'Geeta': ['Espathra'],
-	'Goh': ['Falinks'],
+	'Goh': ['Falinks', 'Gigalith'],
 	'Sordward/Shielbert': ['Falinks', 'Klinklang'],
 	'Sina': ['Lilligant'],
 	'Alder': ['Krookodile'],
@@ -259,7 +259,10 @@ const SEASONAL_POKEMON: Record<string, string[]> = {
 	'Aliana/Bryony/Celosia/Mable': ['Malamar'],
 	'Blue': ['Gyarados'],
 	'Giovanni': ['Krookodile'],
-	'Florian/Juliana': ['Salamence', 'Blaziken', 'Walking Wake', 'Slither Wing', 'Brute Bonnet', 'Iron Moth', 'Iron Jugulis', 'Iron Hands'],
+	'Florian/Juliana': [
+		'Salamence', 'Blaziken', 'Chesnaught', 'Meganium',
+		'Walking Wake', 'Slither Wing', 'Brute Bonnet', 'Iron Moth', 'Iron Jugulis', 'Iron Hands',
+	],
 	'Mira': ['Yanmega'],
 	'Marley': ['Ninjask'],
 	'Flint': ['Blaziken'],
