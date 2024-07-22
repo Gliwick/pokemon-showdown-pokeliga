@@ -141,10 +141,12 @@ const BULBAPEDIA_LINK = 'https://bulbapedia.bulbagarden.net/wiki/';
 
 const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 	'*': [
+		// Aqua Step, Torch Song
+		'Nemona', 'Clavell',
 		// Acid Spray
 		'Iono',
 		// Clangorous Soul
-		'Mustard', 'Nemona', 'Victor/Gloria',
+		'Mustard', 'Victor/Gloria',
 		// Coil
 		'Hugh', 'Cheren', 'Janine', 'Lucas', 'Miriam',
 		// Cotton Guard
@@ -234,7 +236,8 @@ const filterSeasonalSprites = (sprite: Sprite, trainerId: string, tier: Tier): b
 );
 
 const SEASONAL_POKEMON: Record<string, string[]> = {
-	'Nemona': ['Kommo-o', 'Dudunsparce'],
+	'Nemona': ['Skeledirge', 'Quaquaval', 'Kommo-o', 'Dudunsparce'],
+	'Clavell': ['Skeledirge', 'Quaquaval'],
 	'Victor/Gloria': ['Kommo-o', 'Falinks'],
 	'Hugh': ['Serperior'],
 	'Cheren': ['Serperior'],
