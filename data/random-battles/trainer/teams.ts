@@ -261,6 +261,7 @@ const SEASONAL_POKEMON: Record<string, string[]> = {
 	'Rainfort': ['Malamar'],
 	'Aliana/Bryony/Celosia/Mable': ['Malamar'],
 	'Blue': ['Gyarados'],
+	'Ash Ketchum': ['Krookodile'],
 	'Giovanni': ['Krookodile'],
 	'Florian/Juliana': [
 		'Salamence', 'Blaziken', 'Chesnaught', 'Meganium',
