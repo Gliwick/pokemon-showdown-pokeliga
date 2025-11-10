@@ -3963,6 +3963,11 @@
 				"tiers": ["Master", "Veteran"]
 			},
 			{
+				"id": "Sygna Alt",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/VSGiovanni_Sygna_Alt_Masters.png/120px-VSGiovanni_Sygna_Alt_Masters.png",
+				"tiers": ["Master", "Veteran"]
+			},
+			{
 				"id": "Anime",
 				"link": "https://www.serebii.net/anime/pictures/houen/409/AG54.jpg",
 				"tiers": ["Uber", "Veteran"]
@@ -4024,6 +4029,17 @@
 						"abilities": ["Poison Point", "Rivalry"],
 						"items": ["Soft Sand"],
 						"teraTypes": ["Stellar"]
+					}
+				]
+			},
+			"Sygna Alt": {
+				"guzzlord": [
+					{
+						"species": "Guzzlord",
+						"moves": ["Stockpile", "Swallow", "Crunch", "Iron Tail"],
+						"abilities": ["Poison Point", "Rivalry"],
+						"items": ["Black Glasses"],
+						"teraTypes": ["Dark"]
 					}
 				]
 			},
@@ -5724,7 +5740,7 @@
 			{
 				"id": "Sygna",
 				"link": "https://archives.bulbagarden.net/media/upload/thumb/d/d2/VSGladion_Sygna_Masters.png/180px-VSGladion_Sygna_Masters.png",
-				 "tiers": ["Uber"]
+				"tiers": ["Uber"]
 			}
 		],
 		"gen": 7,
@@ -6044,6 +6060,15 @@
 							"items": ["Life Orb"],
 							"natures": ["Adamant"]
 						}
+					],
+					"chandelure": [
+						{
+							"species": "Chandelure",
+							"moves": ["Protect", "Will-O-Wisp", "Overheat", "Shadow Ball"],
+							"abilities": ["Flame Body", "Flash Fire"],
+							"items": ["White Herb"],
+							"natures": ["Modest"]
+						}
 					]
 				},
 				"pokemon": {
@@ -6081,15 +6106,6 @@
 							"abilities": ["Mold Breaker", "Rivalry"],
 							"items": ["Yache Berry"],
 							"natures": ["Jolly"]
-						}
-					],
-					"chandelure": [
-						{
-							"species": "Chandelure",
-							"moves": ["Protect", "Will-O-Wisp", "Overheat", "Shadow Ball"],
-							"abilities": ["Flame Body", "Flash Fire"],
-							"items": ["White Herb"],
-							"natures": ["Modest"]
 						}
 					],
 					"conkeldurr": [
@@ -6252,6 +6268,17 @@
 					"natures": ["Jolly"]
 				}
 			],
+			"eelektross": [
+				{
+					"species": "Eelektross",
+					"moves": ["Thunder Wave", "Thunderbolt", "Discharge", "Gastro Acid"],
+					"abilities": ["Levitate"],
+					"items": ["Magnet"],
+					"natures": ["Quiet"]
+				}
+			]
+		},
+		"pokemon": {
 			"excadrill": [
 				{
 					"species": "Excadrill",
@@ -6269,9 +6296,7 @@
 					"abilities": ["Sturdy"],
 					"items": ["Leftovers"]
 				}
-			]
-		},
-		"pokemon": {
+			],
 			"klinklang": [
 				{
 					"species": "Klinklang",
@@ -6324,15 +6349,6 @@
 					"abilities": ["Weak Armor", "Stench"],
 					"items": ["Black Sludge"],
 					"natures": ["Modest"]
-				}
-			],
-			"eelektross": [
-				{
-					"species": "Eelektross",
-					"moves": ["Thunder Wave", "Thunderbolt", "Discharge", "Gastro Acid"],
-					"abilities": ["Levitate"],
-					"items": ["Magnet"],
-					"natures": ["Quiet"]
 				}
 			],
 			"bug/steel": [
@@ -14973,11 +14989,42 @@
 			]
 		}
 	},
-	"Essentia": {
-		"sprite": "https://cdn2.bulbagarden.net/upload/thumb/2/29/VSEssentia_2.png/150px-VSEssentia_2.png",
+	"Emma": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/f/fc/VSEmma.png/150px-VSEmma.png",
 		"gen": 6,
 		"tiers": ["Ace"],
 		"essentialPokemon": {
+			"malamar": [
+				{
+					"species": "Malamar",
+					"gender": "M",
+					"moves": ["Psycho Cut", "Slash", "Night Slash", "Superpower"],
+					"abilities": ["Contrary"]
+				},
+				{
+					"species": "Malamar",
+					"gender": "M",
+					"moves": ["Superpower", "Payback", "Psycho Cut", "Retaliate"],
+					"abilities": ["Contrary"]
+				},
+				{
+					"species": "Malamar",
+					"gender": "M",
+					"moves": ["Poison Jab", "Night Slash", "Psycho Cut", "Slash"],
+					"abilities": ["Suction Cups"],
+					"items": ["Assault Vest"]
+				}
+			],
+			"volcarona": [
+				{
+					"species": "Volcarona",
+					"gender": "F",
+					"moves": ["Whirlwind", "Bug Buzz", "Quiver Dance", "Heat Wave"],
+					"abilities": ["Flame Body"]
+				}
+			]
+		},
+		"pokemon": {
 			"crobat": [
 				{
 					"species": "Crobat",
@@ -14992,30 +15039,6 @@
 					"abilities": ["Inner Focus"]
 				}
 			],
-			"malamar": [
-				{
-					"species": "Malamar",
-					"gender": "M",
-					"moves": ["Psycho Cut", "Slash", "Night Slash", "Superpower"],
-					"abilities": ["Contrary"]
-				},
-				{
-					"species": "Malamar",
-					"gender": "M",
-					"moves": ["Superpower", "Payback", "Psycho Cut", "Retaliate"],
-					"abilities": ["Contrary"]
-				}
-			],
-			"volcarona": [
-				{
-					"species": "Volcarona",
-					"gender": "F",
-					"moves": ["Whirlwind", "Bug Buzz", "Quiver Dance", "Heat Wave"],
-					"abilities": ["Flame Body"]
-				}
-			]
-		},
-		"pokemon": {
 			"jellicent": [
 				{
 					"species": "Jellicent",
@@ -15047,6 +15070,39 @@
 					"gender": "F",
 					"moves": ["Defog", "Tailwind", "Hurricane", "Moonblast"],
 					"abilities": ["Prankster"]
+				}
+			],
+			"mawile": [
+				{
+					"species": "Mawile",
+					"gender": "F",
+					"moves": ["Play Rough", "Dynamic Punch", "Crunch", "Iron Head"],
+					"abilities": ["Hyper Cutter", "Intimidate"]
+				}
+			],
+			"lopunny": [
+				{
+					"species": "Lopunny",
+					"gender": "F",
+					"moves": ["Fire Punch", "Ice Punch", "Thunder Punch", "Power-Up Punch"],
+					"abilities": ["Cute Charm"],
+					"items": ["Punching Glove"]
+				}
+			],
+			"abomasnow": [
+				{
+					"species": "Abomasnow",
+					"gender": "F",
+					"moves": ["Ice Punch", "Leech Seed", "Leaf Storm", "Earthquake"],
+					"abilities": ["Snow Warning"]
+				}
+			],
+			"lucario": [
+				{
+					"species": "Lucario",
+					"gender": "F",
+					"moves": ["Bullet Punch", "Extreme Speed", "Power-Up Punch", "Stone Edge"],
+					"abilities": ["Steadfast", "Inner Focus"]
 				}
 			]
 		}
@@ -23229,6 +23285,11 @@
 				"id": "Pecharunt",
 				"link": "https://archives.bulbagarden.net/media/upload/thumb/0/0e/VSNemona_Mochi_Mayhem.png/337px-VSNemona_Mochi_Mayhem.png",
 				"tiers": ["Veteran"]
+			},
+			{
+				"id": "Sygna",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/0/0e/VSNemona_Mochi_Mayhem.png/337px-VSNemona_Mochi_Mayhem.png",
+				"tiers": ["Veteran"]
 			}
 		],
 		"gen": 9,
@@ -23241,6 +23302,17 @@
 						"moves": ["Nasty Plot", "Toxic", "Malignant Chain", "Shadow Ball"],
 						"abilities": ["Poison Puppeteer"],
 						"teraTypes": ["Poison"]
+					}
+				]
+			},
+			"Sygna": {
+				"screamtail": [
+					{
+						"species": "Scream Tail",
+						"moves": ["Play Rough", "Sunny Day", "Bulk Up", "Amnesia"],
+						"abilities": ["Protosynthesis"],
+						"items": ["Fairy Feather", "Heat Rock"],
+						"teraTypes": ["Fairy"]
 					}
 				]
 			}
@@ -24613,10 +24685,49 @@
 		}
 	},
 	"Iono": {
-		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/4/41/VSIono.png/376px-VSIono.png",
+		"sprite": [
+			{
+				"id": "REGULAR",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/4/41/VSIono.png/376px-VSIono.png"
+			},
+			{
+				"id": "Halloween",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/VSIono_Fall_2024_Masters.png/120px-VSIono_Fall_2024_Masters.png",
+				"tiers": ["Uber"]
+			},
+			{
+				"id": "Sygna",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/d/dd/VSIono_Sygna_Masters.png/120px-VSIono_Sygna_Masters.png",
+				"tiers": ["Veteran"]
+			}
+		],
 		"gen": 9,
-		"tiers": ["Ace"],
+		"tiers": ["Uber", "Veteran", "Ace"],
 		"types": ["Electric"],
+		"essentialBySprite": {
+			"Halloween": {
+				"fluttermane": [
+					{
+						"species": "Flutter Mane",
+						"moves": ["Shadow Ball", "Energy Ball", "Charge Beam", "Calm Mind"],
+						"abilities": ["Protosynthesis"],
+						"items": ["Spell Tag"],
+						"teraTypes": ["Ghost"]
+					}
+				]
+			},
+			"Sygna": {
+				"ragingbolt": [
+					{
+						"species": "Raging Bolt",
+						"moves": ["Thunder", "Thunderclap", "Ancient Power", "Calm Mind"],
+						"abilities": ["Protosynthesis"],
+						"items": ["Magnet"],
+						"teraTypes": ["Electric"]
+					}
+				]
+			}
+		},
 		"essentialPokemon": {
 			"mismagius": [
 				{
@@ -25763,10 +25874,19 @@
 		}
 	},
 	"Lysandre": {
-		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/2/22/VSLysandre.png/225px-VSLysandre.png",
+		"sprite": [
+			{
+				"id": "REGULAR",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/2/22/VSLysandre.png/225px-VSLysandre.png"
+			},
+			{
+				"id": "Sygna",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/a/a7/VSLysandre_Sygna_Masters.png/120px-VSLysandre_Sygna_Masters.png",
+				"tiers": ["Uber"]
+			}
+		],
 		"gen": 6,
-		"tiers": ["Uber"],
-		"types": ["Flying"],
+		"tiers": ["Uber", "Ace"],
 		"essentialByTier": {
 			"Uber": {
 				"mascot": [
@@ -25783,20 +25903,25 @@
 				]
 			}
 		},
-		"essentialPokemon": {
-			"pyroar": [
-				{
-					"species": "Pyroar",
-					"gender": "M",
-					"moves": ["Flamethrower", "Hyper Voice", "Snarl", "Will-O-Wisp"],
-					"abilities": ["Rivalry"]
-				}
-			],
+		"essentialBySprite": {
+			"Sygna": {
+				"volcanion": [
+					{
+						"species": "Volcanion",
+						"moves": ["Steam Eruption", "Heat Wave", "Hydro Pump", "Stone Edge"],
+						"abilities": ["Water Absorb"],
+						"items": ["Mystic Water"],
+						"teraTypes": ["Water"]
+					}
+				]
+			}
+		},
+		"essentialPokemon": {		
 			"gyarados": [
 				{
 					"species": "Gyarados",
 					"gender": "M",
-					"moves": ["Crunch", "Waterfall", "Earthquake", "Stone Edge"],
+					"moves": ["Crunch", "Waterfall", "Earthquake", ["Stone Edge", "Ice Fang"]],
 					"abilities": ["Intimidate"],
 					"items": ["Life Orb"],
 					"teraTypes": ["Dark"]
@@ -25808,6 +25933,14 @@
 					"abilities": ["Intimidate"],
 					"items": ["Life Orb"],
 					"teraTypes": ["Dark"]
+				}
+			],
+			"pyroar": [
+				{
+					"species": "Pyroar",
+					"gender": "M",
+					"moves": ["Flamethrower", "Hyper Voice", "Snarl", ["Will-O-Wisp", "Trailblaze"]],
+					"abilities": ["Rivalry"]
 				}
 			]
 		},
@@ -25828,13 +25961,36 @@
 					"abilities": ["Insomnia"]
 				}
 			],
-			"volcanion": [
+			"florges": [
 				{
-					"species": "Volcanion",
-					"moves": ["Steam Eruption", "Heat Wave", "Hydro Pump", "Stone Edge"],
-					"abilities": ["Water Absorb"],
-					"items": ["Mystic Water"],
-					"teraTypes": ["Water"]
+					"species": "Florges",
+					"gender": "F",
+					"moves": ["Energy Ball", "Dazzling Gleam", "Psychic", "Calm Mind"],
+					"abilities": ["Flower Veil"]
+				}
+			],
+			"sableye": [
+				{
+					"species": "Sableye",
+					"gender": "M",
+					"moves": ["Will-O-Wisp", "Night Slash", "Shadow Claw", "Confuse Ray"],
+					"abilities": ["Keen Eye"]
+				}
+			],
+			"noivern": [
+				{
+					"species": "Noivern",
+					"gender": "M",
+					"moves": ["Boomburst", "Hurricane", "Dragon Pulse", "Super Fang"],
+					"abilities": ["Infiltrator"]
+				}
+			],
+			"garbodor": [
+				{
+					"species": "Garbodor",
+					"gender": "M",
+					"moves": ["Gunk Shot", "Brutal Swing", "Rock Blast", "Metal Claw"],
+					"abilities": ["Stench", "Weak Armor"]
 				}
 			]
 		}
@@ -25880,6 +26036,14 @@
 						"natures": ["Modest"]
 					},
 					{
+						"species": "Rayquaza",
+						"moves": [["Dragon Pulse", "Draco Meteor"], "Dragon Ascent", ["Earthquake", "Extreme Speed"], "Dragon Dance"],
+						"abilities": ["Air Lock"],
+						"natures": ["Naughty"],
+						"teraTypes": ["Dragon"],
+						"shiny": true
+					},
+					{
 						"species": "Dialga",
 						"moves": ["Draco Meteor", "Earth Power", "Fire Blast", "Steel Beam"],
 						"abilities": ["Telepathy"],
@@ -25910,18 +26074,51 @@
 						"incompatible": ["Hadron Engine", "Orichalcum Pulse"]
 					},
 					{
-						"species": "Iron Bundle",
-						"moves": ["Freeze-Dry", "Hydro Pump", "Blizzard", "Snowscape"],
-						"abilities": ["Quark Drive"],
-						"items": ["Icy Rock"],
-						"teraTypes": ["Ice"],
-						"required": ["Hadron Engine"]
-					},
-					{
 						"species": "Flutter Mane",
 						"moves": ["Shadow Ball", "Moonblast", "Power Gem", "Icy Wind"],
 						"abilities": ["Protosynthesis"],
 						"teraTypes": ["Fairy"],
+						"required": ["Orichalcum Pulse"]
+					},
+					{
+						"species": "Iron Bundle",
+						"moves": ["Freeze-Dry", "Hydro Pump", ["Blizzard", "Ice Beam"], "Snowscape"],
+						"abilities": ["Quark Drive"],
+						"items": ["Icy Rock"],
+						"natures": ["Modest"],
+						"teraTypes": ["Ice"],
+						"required": ["Hadron Engine"]
+					},
+					{
+						"species": "Walking Wake",
+						"moves": ["Hydro Steam", "Dragon Pulse", "Flamethrower", "Sunny Day"],
+						"abilities": ["Protosynthesis"],
+						"items": ["Heat Rock"],
+						"teraTypes": ["Water"],
+						"required": ["Orichalcum Pulse"]
+					},
+					{
+						"species": "Roaring Moon",
+						"moves": ["Dragon Claw", "Crunch", ["Iron Head", "Earthquake"], "Dragon Dance"],
+						"abilities": ["Protosynthesis"],
+						"teraTypes": ["Dragon"],
+						"natures": ["Adamant"],
+						"required": ["Orichalcum Pulse"]
+					},
+					{
+						"species": "Chien-Pao",
+						"moves": ["Icicle Crash", "Crunch", "Sacred Sword", "Ice Shard"],
+						"abilities": ["Sword of Ruin"],
+						"natures": ["Adamant"],
+						"teraTypes": ["Ice"],
+						"incompatible": ["Hadron Engine", "Orichalcum Pulse", "Trick Room"]
+					},
+					{
+						"species": "Chi-Yu",
+						"moves": [["Heat Wave", "Flamethrower"], "Dark Pulse", "Snarl", "Ruination"],
+						"abilities": ["Beads of Ruin"],
+						"natures": ["Modest"],
+						"teraTypes": ["Fire"],
 						"required": ["Orichalcum Pulse"]
 					}
 				]
@@ -25981,11 +26178,41 @@
 						"abilities": ["Quark Drive"],
 						"items": ["Terrain Extender"],
 						"teraTypes": ["Grass"]
+					},
+					{
+						"species": "Sandy Shocks",
+						"moves": ["Discharge", "Earth Power", "Flash Cannon", ["Sunny Day", "Gravity"]],
+						"abilities": ["Protosynthesis"],
+						"items": ["Heat Rock"]
+					},
+					{
+						"species": "Iron Thorns",
+						"moves": ["Stone Edge", "Supercell Slam", ["Earthquake", "Pin Missile"], "Curse"],
+						"abilities": ["Quark Drive"]
+					},
+					{
+						"species": "Scream Tail",
+						"moves": ["Psychic", "Dazzling Gleam", "Flamethrower", "Sunny Day"],
+						"abilities": ["Protosynthesis"],
+						"items": ["Heat Rock"]
+					},
+					{
+						"species": "Iron Valiant",
+						"moves": ["Spirit Break", "Aura Sphere", "Zen Headbutt", ["Shadow Ball", "Swords Dance"]],
+						"abilities": ["Quark Drive"],
+						"teraTypes": ["Fairy"]
 					}
 				]
 			},
 			"Ace": {
 				"starter": [
+					{
+						"species": "Venusaur",
+						"moves": ["Earth Power", "Sludge Bomb", "Giga Drain", "Sunny Day"],
+						"abilities": ["Chlorophyll"],
+						"items": ["Heat Rock"],
+						"teraTypes": ["Ground"]
+					},
 					{
 						"name": "Unrivaled Charizard",
 						"species": "Charizard",
@@ -26002,16 +26229,16 @@
 						"teraTypes": ["Dragon"]
 					},
 					{
-						"species": "Decidueye",
-						"moves": ["Spirit Shackle", "Brave Bird", ["Low Kick", "Swords Dance"], "Leaf Blade"],
-						"abilities": ["Long Reach"],
-						"teraTypes": ["Flying"]
+						"species": "Blastoise",
+						"moves": ["Hydro Pump", "Flash Cannon", "Aura Sphere", "Shell Smash"],
+						"abilities": ["Rain Dish"],
+						"teraTypes": ["Steel"]
 					},
 					{
-						"species": "Samurott",
-						"moves": ["Aqua Cutter", "Megahorn", ["Night Slash", "Drill Run"], "Swords Dance"],
-						"abilities": ["Shell Armor"],
-						"teraTypes": ["Bug"]
+						"species": "Meganium",
+						"moves": ["Seed Bomb", "Zen Headbutt", ["Body Press", "Bulldoze"], "Curse"],
+						"abilities": ["Leaf Guard"],
+						"teraTypes": ["Psychic"]
 					},
 					{
 						"species": "Typhlosion",
@@ -26021,11 +26248,53 @@
 						"teraTypes": ["Ghost"]
 					},
 					{
-						"species": "Inteleon",
-						"moves": ["Blizzard", "Snipe Shot", "Dark Pulse", "Snowscape"],
-						"abilities": ["Sniper"],
+						"species": "Feraligatr",
+						"moves": ["Crunch", "Liquidation", ["Psychic Fangs", "Ice Punch", "Earthquake"], ["Swords Dance", "Dragon Dance"]],
+						"abilities": ["Sheer Force"],
+						"teraTypes": ["Dark"]
+					},
+					{
+						"species": "Typhlosion-Hisui",
+						"moves": ["Infernal Parade", "Flamethrower", "Will-O-Wisp", "Focus Blast"],
+						"abilities": ["Frisk"]
+					},
+					{
+						"species": "Sceptile",
+						"moves": ["Leaf Blade", "Dragon Dance", "Leaf Storm", ["Breaking Swipe", "Thunder Punch", "Earthquake"]],
+						"abilities": ["Unburden"],
+						"items": ["White Herb"],
+						"teraTypes": ["Dragon"]
+					},
+					{
+						"species": "Swampert",
+						"moves": ["Earthquake", ["Hydro Pump", "Muddy Water", "Liquidation"], "Sludge Wave", "Yawn"],
+						"abilities": ["Damp"],
+						"teraTypes": ["Poison"]
+					},
+					{
+						"species": "Infernape",
+						"moves": ["Flare Blitz", "Aura Sphere", "Tera Blast", ["Grass Knot", "Nasty Plot", "Swords Dance"]],
+						"abilities": ["Iron Fist"],
+						"teraTypes": ["Ground"]
+					},
+					{
+						"species": "Empoleon",
+						"moves": ["Surf", ["Flash Cannon", "Grass Knot"], "Blizzard", "Snowscape"],
+						"abilities": ["Competitive"],
 						"items": ["Icy Rock"],
 						"teraTypes": ["Ice"]
+					},
+					{
+						"species": "Emboar",
+						"moves": ["Flare Blitz", "Drain Punch", "Wild Charge", ["Head Smash", "Bulk Up"]],
+						"abilities": ["Reckless"],
+						"teraTypes": ["Electric"]
+					},
+					{
+						"species": "Samurott",
+						"moves": ["Aqua Cutter", "Megahorn", ["Night Slash", "Drill Run"], "Swords Dance"],
+						"abilities": ["Shell Armor"],
+						"teraTypes": ["Bug"]
 					},
 					{
 						"species": "Chesnaught",
@@ -26046,30 +26315,45 @@
 						"teraTypes": ["Fairy"]
 					},
 					{
-						"species": "Empoleon",
-						"moves": ["Surf", ["Flash Cannon", "Grass Knot"], "Blizzard", "Snowscape"],
-						"abilities": ["Competitive"],
+						"species": "Decidueye",
+						"moves": ["Spirit Shackle", "Brave Bird", ["Low Kick", "Swords Dance"], "Leaf Blade"],
+						"abilities": ["Long Reach"],
+						"teraTypes": ["Flying"]
+					},
+					{
+						"species": "Decidueye-Hisui",
+						"moves": ["Triple Arrows", ["Brave Bird", "Shadow Claw"], "Leaf Blade", "Swords Dance"],
+						"abilities": ["Long Reach"],
+						"natures": ["Adamant"]
+					},
+					{
+						"species": "Delphox",
+						"moves": ["Fire Blast", "Psychic", "Dazzling Gleam", ["Will-O-Wisp", "Nasty Plot"]],
+						"abilities": ["Magician"],
+						"teraTypes": ["Fairy"]
+					},
+					{
+						"species": "Incineroar",
+						"moves": ["Flare Blitz", "Darkest Lariat", "Bulk Up", ["Iron Head", "Earthquake", "Taunt"]],
+						"abilities": ["Intimidate"],
+						"teraTypes": ["Dark"]
+					},
+					{
+						"species": "Inteleon",
+						"moves": ["Blizzard", "Snipe Shot", "Dark Pulse", "Snowscape"],
+						"abilities": ["Sniper"],
 						"items": ["Icy Rock"],
 						"teraTypes": ["Ice"]
 					},
 					{
-						"species": "Venusaur",
-						"moves": ["Earth Power", "Sludge Bomb", "Giga Drain", "Sunny Day"],
-						"abilities": ["Chlorophyll"],
-						"items": ["Heat Rock"],
-						"teraTypes": ["Ground"]
+						"species": "Skeledirge",
+						"moves": ["Torch Song", "Shadow Ball", "Stomping Tantrum", "Flame Charge"],
+						"abilities": ["Unaware"]
 					},
 					{
-						"species": "Blastoise",
-						"moves": ["Hydro Pump", "Flash Cannon", "Aura Sphere", "Shell Smash"],
-						"abilities": ["Rain Dish"],
-						"teraTypes": ["Steel"]
-					},
-					{
-						"species": "Meganium",
-						"moves": ["Seed Bomb", "Zen Headbutt", ["Body Press", "Bulldoze"], "Curse"],
-						"abilities": ["Leaf Guard"],
-						"teraTypes": ["Psychic"]
+						"species": "Quaquaval",
+						"moves": ["Aqua Step", "Brick Break", ["Brave Bird", "Ice Spinner"], "Bulk Up"],
+						"abilities": ["Moxie"]
 					}
 				]
 			}
@@ -26077,12 +26361,30 @@
 		"essentialPokemon": {
 			"starter": [
 				{
-					"name": "Unrivaled Cinderace",
-					"species": "Cinderace",
-					"moves": ["High Jump Kick", "Pyro Ball", ["Acrobatics", "Iron Head"], "Bulk Up"],
-					"abilities": ["Libero"],
+					"species": "Blaziken",
+					"moves": ["Blaze Kick", "Brave Bird", ["Earthquake", "Swords Dance", "Bulk Up"], "Low Kick"],
+					"abilities": ["Speed Boost"],
 					"natures": ["Adamant"],
-					"teraTypes": ["Fighting"]
+					"teraTypes": ["Flying"]
+				},
+				{
+					"species": "Torterra",
+					"moves": ["Earthquake", "Wood Hammer", "Smack Down", "Shell Smash"],
+					"abilities": ["Shell Armor"],
+					"natures": ["Brave"],
+					"teraTypes": ["Ground"]
+				},
+				{
+					"species": "Serperior",
+					"moves": ["Leaf Storm", "Dragon Pulse", "Iron Tail", "Glare"],
+					"abilities": ["Contrary"],
+					"natures": ["Modest"]
+				},
+				{
+					"species": "Samurott-Hisui",
+					"moves": ["Ceaseless Edge", "Razor Shell", ["X-Scissor", "Sacred Sword"], "Swords Dance"],
+					"abilities": ["Sharpness"],
+					"natures": ["Adamant"]
 				},
 				{
 					"name": "Unrivaled Greninja",
@@ -26101,33 +26403,39 @@
 					"teraTypes": ["Normal"]
 				},
 				{
-					"species": "Decidueye-Hisui",
-					"moves": ["Triple Arrows", ["Brave Bird", "Shadow Claw"], "Leaf Blade", "Swords Dance"],
-					"abilities": ["Long Reach"],
-					"natures": ["Adamant"]
-				},
-				{
-					"species": "Typhlosion-Hisui",
-					"moves": ["Infernal Parade", "Flamethrower", "Will-O-Wisp", "Focus Blast"],
-					"abilities": ["Frisk"],
-					"natures": ["Modest"]
-				},
-				{
-					"species": "Samurott-Hisui",
-					"moves": ["Ceaseless Edge", "Razor Shell", ["X-Scissor", "Sacred Sword"], "Swords Dance"],
-					"abilities": ["Sharpness"],
-					"natures": ["Adamant"]
-				},
-				{
-					"species": "Blaziken",
-					"moves": ["Blaze Kick", "Brave Bird", ["Earthquake", "Swords Dance", "Bulk Up"], "Low Kick"],
-					"abilities": ["Speed Boost"],
+					"name": "Unrivaled Cinderace",
+					"species": "Cinderace",
+					"moves": ["High Jump Kick", "Pyro Ball", ["Acrobatics", "Iron Head"], "Bulk Up"],
+					"abilities": ["Libero"],
 					"natures": ["Adamant"],
-					"teraTypes": ["Flying"]
+					"teraTypes": ["Fighting"]
+				},
+				{
+					"species": "Meowscarada",
+					"moves": ["Flower Trick", "Night Slash", ["Acrobatics", "Play Rough"], "Hone Claws"],
+					"abilities": ["Protean"],
+					"natures": ["Adamant"]
 				}
 			]
 		},
 		"pokemon": {
+			"dragonite": [
+				{
+					"species": "Dragonite",
+					"moves": ["Extreme Speed", "Scale Shot", "Dragon Dance", "Earthquake"],
+					"abilities": ["Inner Focus"],
+					"teraTypes": ["Normal"],
+					"tiers": ["Uber", "Veteran"]
+				},
+				{
+					"species": "Dragonite",
+					"moves": ["Rain Dance", "Hurricane", "Thunder", "Draco Meteor"],
+					"abilities": ["Inner Focus"],
+					"items": ["Damp Rock"],
+					"teraTypes": ["Normal"],
+					"tiers": ["Ace"]
+				}
+			],
 			"tyranitar": [
 				{
 					"species": "Tyranitar",
@@ -26154,6 +26462,12 @@
 					"moves": ["Draco Meteor", "Dark Pulse", "Nasty Plot", "Body Slam"],
 					"abilities": ["Levitate"],
 					"teraTypes": ["Steel"]
+				},
+				{
+					"species": "Hydreigon",
+					"moves": ["Tera Blast", "Dark Pulse", "Dragon Pulse", ["Earth Power", "Nasty Plot"]],
+					"abilities": ["Levitate"],
+					"teraTypes": ["Poison"]
 				}
 			],
 			"drifblim": [
@@ -29395,6 +29709,708 @@
 					"moves": ["Psychic", "Disable", "Thunderbolt", "Will-O-Wisp"],
 					"abilities": ["Synchronize", "Trace"],
 					"items": ["Lum Berry"]
+				}
+			]
+		}
+	},
+	"Urbain/Taunie": {
+		"sprite": [
+			{
+				"id": "Urbain",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/ZA_Urbain.png/25px-ZA_Urbain.png",
+				"isRegular": true,
+				"name": "Urbain"
+			},
+			{
+				"id": "Taunie",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/a/ae/VSTaunie.png/169px-VSTaunie.png",
+				"isRegular": true,
+				"name": "Taunie"
+			}
+		],
+		"gen": 6,
+		"game": "PLZA",
+		"link": "Rival",
+		"essentialPokemon": {
+			"meganium": [
+				{
+					"species": "Meganium",
+					"gender": "M",
+					"moves": ["Leech Seed", "Earth Power", "Dazzling Gleam", "Giga Drain"],
+					"abilities": ["Overgrow"],
+					"teraTypes": ["Fairy"]
+				}
+			],
+			"emboar": [
+				{
+					"species": "Emboar",
+					"gender": "M",
+					"moves": ["Flare Blitz", "Stone Edge", "Thunder Punch", "Bulk Up"],
+					"abilities": ["Blaze"],
+					"items": ["Leftovers"]
+				}
+			],
+			"feraligatr": [
+				{
+					"species": "Feraligatr",
+					"gender": "M",
+					"moves": ["Breaking Swipe", "Liquidation", "Ice Fang", "Bulldoze"],
+					"abilities": ["Torrent"],
+					"teraTypes": ["Dragon"],
+					"items": ["Life Orb"]
+				}
+			],
+			"floette": [
+				{
+					"species": "Floette-Eternal",
+					"moves": ["Light of Ruin", "Energy Ball", "Giga Drain", "Synthesis"],
+					"abilities": ["Flower Veil"],
+					"natures": ["Modest"]
+				}
+			]
+		},
+		"pokemon": {
+			"meowstic": [
+				{
+					"species": "Meowstic-M",
+					"moves": ["Light Screen", "Reflect", "Psychic", "Thunderbolt"],
+					"abilities": ["Keen Eye", "Infiltrator"]
+				}
+			],
+			"goodra": [
+				{
+					"species": "Goodra",
+					"gender": "M",
+					"moves": ["Surf", "Toxic", "Draco Meteor", "Blizzard"],
+					"abilities": ["Sap Sipper"]
+				}
+			],
+			"avalugg": [
+				{
+					"species": "Avalugg",
+					"gender": "M",
+					"moves": ["Icicle Crash", "Crunch", "Stone Edge", "Protect"],
+					"abilities": ["Own Tempo"]
+				}
+			],
+			"manectric": [
+				{
+					"species": "Manectric",
+					"gender": "M",
+					"moves": ["Snarl", "Thunder", "Overheat", "Protect"],
+					"abilities": ["Static", "Lightning Rod"]
+				}
+			]
+		}
+	},
+	"Canari": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/VSCanari.png/170px-VSCanari.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Electric"],
+		"essentialPokemon": {
+			"eelektross": [
+				{
+					"species": "Eelektross",
+					"gender": "F",
+					"moves": ["Liquidation", "Flamethrower", "Zap Cannon", "Giga Drain"],
+					"abilities": ["Levitate"],
+					"items": ["Life Orb"]
+				}
+			]
+		},
+		"pokemon": {
+			"heliolisk": [
+				{
+					"species": "Heliolisk",
+					"gender": "F",
+					"moves": ["Grass Knot", "Surf", "Parabolic Charge", "Discharge"],
+					"abilities": ["Dry Skin"]
+				}
+			],
+			"ampharos": [
+				{
+					"species": "Ampharos",
+					"gender": "F",
+					"moves": ["Dazzling Gleam", "Thunder", "Power Gem", "Ice Punch"],
+					"abilities": ["Static"]
+				}
+			],
+			"stunfisk": [
+				{
+					"species": "Stunfisk",
+					"gender": "F",
+					"moves": ["Discharge", "Sludge Wave", "Stealth Rock", "Earth Power"],
+					"abilities": ["Static"]
+				}
+			],
+			"manectric": [
+				{
+					"species": "Manectric",
+					"gender": "F",
+					"moves": ["Snarl", "Flamethrower", "Thunderbolt", "Protect"],
+					"abilities": ["Static", "Lightning Rod"]
+				}
+			],
+			"dedenne": [
+				{
+					"species": "Dedenne",
+					"gender": "F",
+					"moves": ["Super Fang", "Thunder", "Dazzling Gleam", "Charge"],
+					"abilities": ["Pickup"]
+				}
+			]
+		}
+	},
+	"Ivor": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/5/55/ZA_Ivor.png/173px-ZA_Ivor.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Fighting"],
+		"essentialPokemon": {
+			"falinks": [
+				{
+					"species": "Falinks",
+					"moves": ["Iron Head", "Close Combat", "Rock Slide", "No Retreat"],
+					"abilities": ["Battle Armor"],
+					"items": ["Life Orb"]
+				}
+			]
+		},
+		"pokemon": {
+			"heracross": [
+				{
+					"species": "Heracross",
+					"gender": "M",
+					"moves": ["Stone Edge", "Megahorn", "Bulk Up", "Close Combat"],
+					"abilities": ["Swarm", "Guts"]
+				}
+			],
+			"medicham": [
+				{
+					"species": "Medicham",
+					"gender": "M",
+					"moves": ["Zen Headbutt", "Dynamic Punch", "Protect", "Ice Punch"],
+					"abilities": ["Pure Power"]
+				}
+			],
+			"machamp": [
+				{
+					"species": "Machamp",
+					"gender": "M",
+					"moves": ["Earthquake", "Close Combat", "Poison Jab", "Bulk Up"],
+					"abilities": ["Guts"]
+				}
+			],
+			"hawlucha": [
+				{
+					"species": "Hawlucha",
+					"gender": "M",
+					"moves": ["Swords Dance", "Flying Press", "Iron Head", "Thunder Punch"],
+					"abilities": ["Limber"]
+				}
+			],
+			"gallade": [
+				{
+					"species": "Gallade",
+					"moves": ["Psycho Cut", "Leaf Blade", "Stone Edge", "Fire Punch"],
+					"abilities": ["Sharpness"]
+				}
+			]
+		}
+	},
+	"Corbeau": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/3/36/ZA_Corbeau.png/34px-ZA_Corbeau.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Poison"],
+		"essentialPokemon": {
+			"scolipede": [
+				{
+					"species": "Scolipede",
+					"gender": "M",
+					"moves": ["Gunk Shot", "Protect", "X-Scissor", "Earthquake"],
+					"abilities": ["Poison Point", "Swarm"],
+					"items": ["Leftovers"]
+				}
+			]
+		},
+		"pokemon": {
+			"arbok": [
+				{
+					"species": "Arbok",
+					"gender": "M",
+					"moves": ["Poison Jab", "Fire Fang", "Toxic", "Leech Life"],
+					"abilities": ["Intimidate", "Shed Skin"]
+				}
+			],
+			"barbaracle": [
+				{
+					"species": "Barbaracle",
+					"gender": "M",
+					"moves": ["Stone Edge", "Liquidation", "Poison Jab", "Stealth Rock"],
+					"abilities": ["Tough Claws", "Sniper"]
+				}
+			],
+			"roserade": [
+				{
+					"species": "Roserade",
+					"gender": "M",
+					"moves": ["Giga Drain", "Synthesis", "Sludge Bomb", "Shadow Ball"],
+					"abilities": ["Natural Cure", "Poison Point"]
+				}
+			],
+			"gyarados": [
+				{
+					"species": "Gyarados",
+					"gender": "M",
+					"moves": ["Crunch", "Waterfall", "Ice Fang", "Bounce"],
+					"abilities": ["Intimidate"]
+				}
+			],
+			"garbodor": [
+				{
+					"species": "Garbodor",
+					"gender": "M",
+					"moves": ["Gunk Shot", "Rock Blast", "Bullet Seed", "Brutal Swing"],
+					"abilities": ["Stench", "Weak Armor"]
+				}
+			]
+		}
+	},
+	"Jacinthe": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/2/29/VSJacinthe.png/178px-VSJacinthe.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Fairy"],
+		"essentialPokemon": {
+			"clefable": [
+				{
+					"species": "Clefable",
+					"gender": "F",
+					"moves": ["Air Slash", "Moonblast", "Mystical Fire", "Protect"],
+					"abilities": ["Magic Guard"],
+					"items": ["Life Orb"],
+					"teraTypes": ["Flying"]
+				}
+			]
+		},
+		"pokemon": {
+			"carbink": [
+				{
+					"species": "Carbink",
+					"moves": ["Stealth Rock", "Stone Edge", "Moonblast", "Flash Cannon"],
+					"abilities": ["Clear Body"]
+				}
+			],
+			"mawile": [
+				{
+					"species": "Mawile",
+					"gender": "F",
+					"moves": ["Play Rough", "Iron Head", "Crunch", "Fire Fang"],
+					"abilities": ["Hyper Cutter", "Intimidate"]
+				}
+			],
+			"aurorus": [
+				{
+					"species": "Aurorus",
+					"gender": "F",
+					"moves": ["Blizzard", "Freeze-Dry", "Rock Blast", "Protect"],
+					"abilities": ["Snow Warning"]
+				}
+			],
+			"gardevoir": [
+				{
+					"species": "Gardevoir",
+					"gender": "F",
+					"moves": ["Moonblast", "Mystical Fire", "Psychic", "Calm Mind"],
+					"abilities": ["Synchronize", "Trace"]
+				}
+			],
+			"sylveon": [
+				{
+					"species": "Sylveon",
+					"gender": "F",
+					"moves": ["Moonblast", "Shadow Ball", "Dazzling Gleam", "Calm Mind"],
+					"abilities": ["Cute Charm"]
+				}
+			]
+		}
+	},
+	"Grisham": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/ZA_Grisham.png/173px-ZA_Grisham.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Dark"],
+		"essentialPokemon": {
+			"charizard": [
+				{
+					"species": "Charizard",
+					"gender": "M",
+					"moves": ["Flare Blitz", "Air Slash", "Dragon Rush", "Protect"],
+					"abilities": ["Blaze"],
+					"items": ["Life Orb"],
+					"teraTypes": ["Dragon"]
+				}
+			]
+		},
+		"pokemon": {
+			"pangoro": [
+				{
+					"species": "Pangoro",
+					"gender": "M",
+					"moves": ["Close Combat", "Crunch", "Power-Up Punch", "Protect"],
+					"abilities": ["Iron Fist", "Mold Breaker"]
+				}
+			],
+			"malamar": [
+				{
+					"species": "Malamar",
+					"gender": "M",
+					"moves": ["Bulk Up", "Psyshock", "Night Slash", "Liquidation"],
+					"abilities": ["Suction Cups"]
+				}
+			],
+			"pyroar": [
+				{
+					"species": "Pyroar",
+					"gender": "F",
+					"moves": ["Overheat", "Earth Power", "Snarl", "Hyper Voice"],
+					"abilities": ["Rivalry", "Unnerve"]
+				}
+			],
+			"tyranitar": [
+				{
+					"species": "Tyranitar",
+					"gender": "M",
+					"moves": ["Stone Edge", "Ice Punch", "Crunch", "Earthquake"],
+					"abilities": ["Sand Stream"]
+				}
+			],
+			"salamence": [
+				{
+					"species": "Salamence",
+					"gender": "M",
+					"moves": ["Dual Wingbeat", "Earthquake", "Fire Fang", "Draco Meteor"],
+					"abilities": ["Intimidate"]
+				}
+			]
+		}
+	},
+	"Katherine": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/1/16/VSFurisode_Girl_4.png/170px-VSFurisode_Girl_4.png",
+		"gen": 6,
+		"tiers": ["Ace"],
+		"types": ["Fire"],
+		"essentialPokemon": {
+			"slurpuff": [
+				{
+					"species": "Slurpuff",
+					"gender": "F",
+					"moves": ["Dazzling Gleam", "Double Team", "Cotton Guard", "Calm Mind"],
+					"abilities": ["Sweet Veil"],
+					"items": ["Fairy Feather"]
+				}
+			],
+			"ninetales": [
+				{
+					"species": "Ninetales",
+					"gender": "F",
+					"moves": ["Grudge", "Heat Wave", "Protect", "Quick Attack"],
+					"abilities": ["Drought"],
+					"items": ["Heat Rock"]
+				}
+			]
+		},
+		"pokemon": {
+			"cherrim": [
+				{
+					"species": "Cherrim",
+					"gender": "F",
+					"moves": ["Seed Bomb", "Return", "Morning Sun", "Sunny Day"],
+					"abilities": ["Flower Gift"],
+					"items": ["Heat Rock"]
+				}
+			],
+			"tropius": [
+				{
+					"species": "Tropius",
+					"gender": "F",
+					"moves": ["Tailwind", "Air Slash", "Solar Beam", "Sunny Day"],
+					"abilities": ["Chlorophyll"],
+					"items": ["Heat Rock"]
+				}
+			],
+			"chandelure": [
+				{
+					"species": "Chandelure",
+					"gender": "F",
+					"moves": ["Fire Spin", "Energy Ball", "Shadow Ball", "Flamethrower"],
+					"abilities": ["Flash Fire", "Flame Body"]
+				}
+			],
+			"flareon": [
+				{
+					"species": "Flareon",
+					"gender": "M",
+					"moves": ["Iron Tail", "Flame Wheel", "Fire Spin", "Dig"],
+					"abilities": ["Flash Fire"]
+				}
+			]
+		}
+	},
+	"Blossom": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/d/d2/VSFurisode_Girl_3.png/170px-VSFurisode_Girl_3.png",
+		"gen": 6,
+		"tiers": ["Ace"],
+		"types": ["Steel"],
+		"essentialPokemon": {
+			"gardevoir": [
+				{
+					"species": "Gardevoir",
+					"gender": "F",
+					"moves": ["Moonblast", "Hypnosis", ["Calm Mind", "Charge Beam"], ["Draining Kiss", "Dream Eater", "Healing Wish", "Wish"]],
+					"abilities": ["Synchronize", "Trace"],
+					"items": ["Fairy Feather"]
+				}
+			],
+			"hippowdon": [
+				{
+					"species": "Hippowdon",
+					"gender": "F",
+					"moves": ["Fire Fang", "Thunder Fang", "Protect", "Crunch"],
+					"abilities": ["Sand Stream"],
+					"items": ["Smooth Rock"]
+				}
+			]
+		},
+		"pokemon": {
+			"scizor": [
+				{
+					"species": "Scizor",
+					"gender": "F",
+					"moves": ["Bullet Punch", "Double Hit", "X-Scissor", "Sandstorm"],
+					"abilities": ["Technician"],
+					"items": ["Smooth Rock"]
+				}
+			],
+			"gliscor": [
+				{
+					"species": "Gliscor",
+					"gender": "F",
+					"moves": ["Dual Wingbeat", "Dig", "Rock Slide", "Sandstorm"],
+					"abilities": ["Sand Veil"],
+					"items": ["Smooth Rock"]
+				}
+			],
+			"bronzong": [
+				{
+					"species": "Bronzong",
+					"moves": ["Trick Room", "Extrasensory", "Flash Cannon", "Protect"],
+					"abilities": ["Heatproof"]
+				}
+			],
+			"klefki": [
+				{
+					"species": "Klefki",
+					"moves": ["Psychic", "Flash Cannon", "Draining Kiss"],
+					"abilities": ["Prankster"]
+				}
+			],
+			"lucario": [
+				{
+					"species": "Lucario",
+					"gender": "F",
+					"moves": ["Water Pulse", "Aura Sphere", "Bullet Punch", "Dragon Pulse"],
+					"abilities": ["Steadfast", "Inner Focus"]
+				}
+			]
+		}
+	},
+	"Thalassa": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/VSFurisode_Girl_2.png/170px-VSFurisode_Girl_2.png",
+		"gen": 6,
+		"tiers": ["Ace"],
+		"types": ["Water"],
+		"essentialPokemon": {
+			"politoed": [
+				{
+					"species": "Politoed",
+					"gender": "F",
+					"moves": ["Hyper Voice", "Scald", "Protect", "Ice Beam"],
+					"abilities": ["Drizzle"],
+					"items": ["Damp Rock"]
+				}
+			]
+		},
+		"pokemon": {
+			"ludicolo": [
+				{
+					"species": "Ludicolo",
+					"gender": "F",
+					"moves": ["Giga Drain", "Grass Knot", "Protect", "Rain Dance"],
+					"abilities": ["Rain Dish"],
+					"items": ["Damp Rock"]
+				}
+			],
+			"beartic": [
+				{
+					"species": "Beartic",
+					"gender": "F",
+					"moves": ["Icicle Crash", "Rock Slide", "Dive", "Rain Dance"],
+					"abilities": ["Swift Swim"],
+					"items": ["Damp Rock"]
+				}
+			],
+			"slowking": [
+				{
+					"species": "Slowking",
+					"gender": "M",
+					"moves": ["Trick Room", "Zen Headbutt", "Scald", "Brick Break"],
+					"abilities": ["Oblivious"]
+				}
+			],
+			"electic": [
+				{
+					"species": "Raichu",
+					"gender": "M",
+					"moves": ["Thunderbolt", "Surf", "Thunder", "Iron Tail"],
+					"abilities": ["Static"]
+				},
+				{
+					"species": "Jolteon",
+					"gender": "M",
+					"moves": [["Thunderbolt", "Discharge"], "Shadow Ball", "Thunder", "Hyper Voice"],
+					"abilities": ["Volt Absorb"]
+				}
+			],
+			"vaporeon": [
+				{
+					"species": "Vaporeon",
+					"gender": "M",
+					"moves": ["Ice Beam", "Hydro Pump", "Surf", "Blizzard"],
+					"abilities": ["Hydration"]
+				}
+			]
+		}
+	},
+	"Kali": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/8/82/VSFurisode_Girl_1.png/170px-VSFurisode_Girl_1.png",
+		"gen": 6,
+		"tiers": ["Ace"],
+		"types": ["Ice"],
+		"essentialPokemon": {
+			"azumarill": [
+				{
+					"species": "Azumarill",
+					"gender": "F",
+					"moves": ["Play Rough", ["Defense Curl", "Amnesia"], ["Aqua Tail", "Liquidation"], "Work Up"],
+					"abilities": ["Huge Power"],
+					"items": ["Fairy Feather"]
+				}
+			],
+			"abomasnow": [
+				{
+					"species": "Abomasnow",
+					"gender": "F",
+					"moves": ["Blizzard", "Energy Ball", "Protect", "Focus Blast"],
+					"abilities": ["Snow Warning"],
+					"items": ["Icy Rock"]
+				}
+			]
+		},
+		"pokemon": {
+			"froslass": [
+				{
+					"species": "Froslass",
+					"moves": ["Blizzard", "Thunderbolt", "Shadow Ball", "Snowscape"],
+					"abilities": ["Snow Cloak"],
+					"items": ["Icy Rock"]
+				}
+			],
+			"mamoswine": [
+				{
+					"species": "Mamoswine",
+					"gender": "F",
+					"moves": ["Ice Fang", "Stone Edge", "Earthquake", "Snowscape"],
+					"abilities": ["Snow Cloak"],
+					"items": ["Icy Rock"]
+				}
+			],
+			"beartic": [
+				{
+					"species": "Beartic",
+					"gender": "F",
+					"moves": ["Icicle Crash", "Rock Slide", "Dive", "Snowscape"],
+					"abilities": ["Slush Rush"],
+					"items": ["Icy Rock"]
+				}
+			],
+			"vaporeon": [
+				{
+					"species": "Vaporeon",
+					"gender": "M",
+					"moves": ["Ice Beam", "Hydro Pump", "Surf", "Blizzard"],
+					"abilities": ["Water Absorb"]
+				}
+			]
+		}
+	},
+	"Lucius": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/c/cd/Lucius_expression_sheet.png/417px-Lucius_expression_sheet.png",
+		"gen": "Uber",
+		"essentialPokemon":{
+			"rayquaza": [
+				{
+					"name": "Black Rayquaza",
+					"species": "Rayquaza",
+					"moves": ["Draco Meteor", "Dragon Pulse", "Dragon Ascent", "Dragon Tail"],
+					"abilities": ["Air Lock"],
+					"shiny": true
+				}
+			]
+		},
+		"pokemon": {
+			"arboliva": [
+				{
+					"species": "Arboliva",
+					"moves": ["Terrain Pulse", "Dazzling Gleam", "Giga Drain", "Strength Sap"],
+					"abilities": ["Seed Sower"]
+				}
+			],
+			"moltres": [
+				{
+					"species": "Moltres-Galar",
+					"moves": ["Air Slash", "Fiery Wrath", "Dual Wingbeat", "Hurricane"],
+					"abilities": ["Berserk"]
+				}
+			],
+			"lapras": [
+				{
+					"species": "Lapras",
+					"gender": "F",
+					"moves": ["Haze", "Ice Beam", "Hydro Pump", "Body Slam"],
+					"abilities": ["Water Absorb", "Shell Armor"]
+				}
+			],
+			"kleavor": [
+				{
+					"species": "Kleavor",
+					"moves": ["Stone Edge", "X-Scissor", "Stone Axe"],
+					"abilities": ["Swarm"]
+				}
+			],
+			"gougingfire": [
+				{
+					"species": "Gouging Fire",
+					"moves": ["Burning Bulwark", "Dragon Pulse", "Fire Fang", "Raging Fury"],
+					"abilities": ["Protosynthesis"],
+					"items": ["Booster Energy"]
 				}
 			]
 		}
