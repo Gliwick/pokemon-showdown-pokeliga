@@ -81,7 +81,7 @@ const getTypes = (team: Team, tier: Tier): string[] => {
 	return [];
 };
 
-const AVAILABLE_TIERS: Tier[] = ['Uber', 'Master', 'Master', 'Veteran', 'Veteran', 'Veteran', 'Ace', 'Ace'];
+const AVAILABLE_TIERS: Tier[] = ['Uber', 'Master', 'Master', 'Master', 'Veteran', 'Veteran', 'Veteran', 'Ace', 'Ace', 'Ace'];
 const TIER_SCALE: Record<Tier, number> = {
 	Uber: 75,
 	Master: 80,
@@ -141,68 +141,19 @@ const BULBAPEDIA_LINK = 'https://bulbapedia.bulbagarden.net/wiki/';
 
 const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 	'*': [
-		// Acid Spray
-		'Iono',
-		// Clangorous Soul
-		'Mustard', 'Nemona', 'Victor/Gloria',
-		// Coil
-		'Hugh', 'Cheren', 'Janine', 'Lucas', 'Miriam',
-		// Cotton Guard
-		'Cilan', 'Sawyer', 'Shauna',
-		// Electro Shot
-		'Drayton',
-		// Esper Wing
-		'Kamado',
-		// Fiery Dance
-		'Turo',
-		// Geomancy
-		'Lysandre',
-		// Lumina Crash
-		'Geeta', 'Tulip',
-		// No Retreat
-		'Goh', 'Sordward/Shielbert',
-		// Power-Up Punch
-		'Candice', 'Marnie',
-		// Quiver Dance
-		'Sina', 'Alder', 'Benga', 'Janine', 'Grusha', 'Masamune', 'Erika', 'Dawn',
-		// Shift Gear
-		'Colress', 'Hilbert/Hilda/Nate/Rosa', 'Eri',
-		// Take Heart
-		'Mysterial',
-		// Contrary
-		'Alain', 'Essentia', 'Rainfort', 'Cyrano', 'Aliana/Bryony/Celosia/Mable',
-		// Beast Boost
-		'Guzma', 'Lusamine', 'Wallace', 'Tate and Liza',
-		// Moxie and variations
-		'Blue', 'Ash Ketchum', 'Giovanni', 'Barry', 'Florian/Juliana',
-		// Speed Boost
-		'Mira', 'Marley', 'Flint', 'Aaron', 'Thorton', 'Saturn', 'Crispin', 'Biden',
-		// Unburden
-		'Mallow', 'Brendan/May',
-		// Stored Power
-		'Bianca', 'Falkner',
+		// Anime gen 6
+		'Alain', 'Sawyer',
+		// Paradox
+		'Lucius', 'Bede'
 	],
-	'Uber': [
-		// Quiver Dance
-		'Mina',
-		// Shift Gear
-		'Ingo',
-		// Beast Boost
-		'Hau',
-		// Moxie and variations
-		'Leon', 'Gladion', 'Victor/Gloria',
-	],
+	'Uber': [],
 	'Master': [
-		// Clangorous Soul
-		'Cynthia',
-		// Shift Gear
-		'Ingo',
-		// Tidy Up
-		'Kieran',
+		// Diancie
+		'Hilbert/Hilda/Nate/Rosa'
 	],
 	'Veteran': [
-		// Beast Boost
-		'Gladion', 'Hau',
+		// Diancie
+		'Diantha'
 	],
 	'Ace': [],
 };
@@ -211,20 +162,12 @@ const filterSeasonalTeams = (id: string, team: Team, tier: Tier, isTrainer: bool
 		return true;
 	}
 	const t = (team as Trainer);
-	return false;
+	return t.gen === 6 || t.gen === 9;
 };
 
 const SEASONAL_SPRITES: Record<string, string[]> = {
-	'Cynthia': ['Sygna'],
-	'Candice': ['Valentine'],
-	'Marnie': ['Valentine'],
-	'Hilbert/Hilda/Nate/Rosa': ['Hilda', 'Hilda Special', 'Hilda Summer', 'Rosa', 'Rosa Special'],
-	'Guzma': ['Special'],
-	'Lusamine': ['Nihilego'],
-	'Giovanni': ['REGULAR', 'Rainbow', 'Anime'],
-	'Leon': ['Holiday'],
-	'Victor/Gloria': ['Victor Uber'],
-	'Brendan/May': ['Brendan', 'May'],
+	'Hilbert/Hilda/Nate/Rosa': ['Hilda', 'Hilda Special', 'Hilda Summer', 'Hilda Sygna'],
+	'Aliana/Bryony/Celosia/Mable': ['Mable']
 };
 const filterSeasonalSprites = (sprite: Sprite, trainerId: string, tier: Tier): boolean => (
 	(!sprite.tiers || sprite.tiers.includes(tier)) &&
@@ -232,44 +175,6 @@ const filterSeasonalSprites = (sprite: Sprite, trainerId: string, tier: Tier): b
 );
 
 const SEASONAL_POKEMON: Record<string, string[]> = {
-	'Nemona': ['Kommo-o', 'Dudunsparce'],
-	'Victor/Gloria': ['Kommo-o', 'Falinks'],
-	'Hugh': ['Serperior'],
-	'Cheren': ['Serperior'],
-	'Janine': ['Arbok'],
-	'Lucas': ['Dudunsparce', 'Mothim'],
-	'Cilan': ['Maractus', 'Lilligant'],
-	'Sawyer': ['Slurpuff'],
-	'Shauna': ['Slurpuff'],
-	'Turo': ['Iron Moth'],
-	'Lysandre': ['Xerneas'],
-	'Geeta': ['Espathra'],
-	'Goh': ['Falinks'],
-	'Sordward/Shielbert': ['Falinks', 'Klinklang'],
-	'Sina': ['Lilligant'],
-	'Alder': ['Krookodile'],
-	'Dawn': ['Infernape', 'Wormadam', 'Bellossom'],
-	'Erika': ['Lilligant'],
-	'Ingo': ['Klinklang', 'Wyrdeer'],
-	'Hilbert/Hilda/Nate/Rosa': ['Lilligant', 'Klinklang', 'Krookodile', 'Scrafty', 'Musharna'],
-	'Mysterial': ['Manaphy'],
-	'Kieran': ['Furret'],
-	'Alain': ['Malamar'],
-	'Rainfort': ['Malamar'],
-	'Aliana/Bryony/Celosia/Mable': ['Malamar'],
-	'Blue': ['Gyarados'],
-	'Giovanni': ['Krookodile'],
-	'Florian/Juliana': ['Salamence', 'Blaziken', 'Walking Wake', 'Slither Wing', 'Brute Bonnet', 'Iron Moth', 'Iron Jugulis', 'Iron Hands'],
-	'Mira': ['Yanmega'],
-	'Marley': ['Ninjask'],
-	'Flint': ['Blaziken'],
-	'Aaron': ['Beautifly', 'Yanmega'],
-	'Thorton': ['Yanmega'],
-	'Saturn': ['Sharpedo'],
-	'Mallow': ['Sceptile'],
-	'Brendan/May': ['Blaziken', 'Sceptile'],
-	'Bianca': ['Serperior'],
-	'Falkner': ['Xatu'],
 };
 
 export class RandomMTTeams extends RandomTeams {

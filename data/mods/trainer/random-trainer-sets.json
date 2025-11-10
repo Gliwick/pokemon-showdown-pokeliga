@@ -30174,7 +30174,7 @@
 				{
 					"species": "Gardevoir",
 					"gender": "F",
-					"moves": ["Moonblast", "Hypnosis", ["Calm Mind", "Charge Beam"], ["Draining Kiss", "Dream Eater", "Healing Wish", "Wish"]],
+					"moves": ["Moonblast", "Charge Beam", "Calm Mind", ["Draining Kiss", "Healing Wish", "Wish"]],
 					"abilities": ["Synchronize", "Trace"],
 					"items": ["Fairy Feather"]
 				}
@@ -30363,7 +30363,8 @@
 	},
 	"Lucius": {
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/c/cd/Lucius_expression_sheet.png/417px-Lucius_expression_sheet.png",
-		"gen": "Uber",
+		"gen": "Anime",
+		"tiers": ["Uber"],
 		"essentialPokemon":{
 			"rayquaza": [
 				{
@@ -30411,6 +30412,255 @@
 					"moves": ["Burning Bulwark", "Dragon Pulse", "Fire Fang", "Raging Fury"],
 					"abilities": ["Protosynthesis"],
 					"items": ["Booster Energy"]
+				}
+			]
+		}
+	},
+	"Bede": {
+		"sprite": [
+			{
+				"id": "Sygna",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/4/44/VSBede_Sygna_Masters.png/120px-VSBede_Sygna_Masters.png"
+			}
+		],
+		"gen": 8,
+		"types": ["Fairy", "Psychic"],
+		"essentialPokemon": {
+			"hatterene": [
+				{
+					"species": "Hatterene",
+					"gender": "F",
+					"moves": ["Psychic", "Dazzling Gleam", "Dark Pulse", "Mystical Fire"],
+					"abilities": ["Anticipation"],
+					"teraTypes": ["Fairy"]
+				}
+			],
+			"ironvaliant": [
+				{
+					"species": "Iron Valiant",
+					"moves": ["Close Combat", "Focus Blast", "Swords Dance", ["Leaf Blade", "Night Slash", "Psycho Cut", "Shadow Claw"]],
+					"abilities": ["Quark Drive"],
+					"items": ["Black Belt"],
+					"teraTypes": ["Fighting"]
+				}
+			],
+			"inteleon": [
+				{
+					"species": "Inteleon",
+					"gender": "M",
+					"moves": ["Snipe Shot", "Rain Dance", "Work Up", "Shadow Ball"],
+					"abilities": ["Torrent"],
+					"items": ["Mystic Water"]
+				}
+			]
+		},
+		"pokemon": {
+			"mawile": [
+				{
+					"species": "Mawile",
+					"gender": "F",
+					"moves": ["Iron Head", "Fake Tears", "Crunch", "Play Rough"],
+					"abilities": ["Intimidate"]
+				}
+			],
+			"psychic/fairy": [
+				{
+					"species": "Gardevoir",
+					"gender": "F",
+					"moves": ["Shadow Ball", "Energy Ball", "Psychic", "Dazzling Gleam"],
+					"abilities": ["Synchronize"]
+				},
+				{
+					"species": "Rapidash",
+					"gender": "M",
+					"moves": ["Zen Headbutt", "Smart Strike", "Dazzling Gleam", "Drill Run"],
+					"abilities": ["Pastel Veil"]
+				}
+			],
+			"sylveon": [
+				{
+					"species": "Sylveon",
+					"gender": "F",
+					"moves": ["Moonblast", "Light Screen", "Shadow Ball", "Psyshock"],
+					"abilities": ["Cute Charm"]
+				}
+			],
+			"reuniclus": [
+				{
+					"species": "Reuniclus",
+					"moves": ["Light Screen", "Reflect", "Psyshock", "Psychic"],
+					"abilities": ["Magic Guard"]
+				}
+			]
+		}
+	},
+	"Yvon": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/Z-A_Royale_Profile_Yvon.png/173px-Z-A_Royale_Profile_Yvon.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"pokemon": {
+			"aromatisse": [
+				{
+					"species": "Aromatisse",
+					"gender": "F",
+					"moves": ["Hypnosis", "Moonblast", "Psychic", "Heal Block"],
+					"abilities": ["Healer"]
+				}
+			],
+			"slowbro": [
+				{
+					"species": "Slowbro",
+					"gender": "F",
+					"moves": ["Psychic", "Flamethrower", "Hydro Pump", "Shadow Ball"],
+					"abilities": ["Oblivious", "Own Tempo"]
+				}
+			],
+			"slurpuff": [
+				{
+					"species": "Slurpuff",
+					"gender": "F",
+					"moves": ["Sticky Web", "Fake Tears", "Dazzling Gleam", "Energy Ball"],
+					"abilities": ["Sweet Veil"]
+				}
+			],
+			"trevenant": [
+				{
+					"species": "Trevenant",
+					"gender": "F",
+					"moves": ["Wood Hammer", "Phantom Force", "X-Scissor", "Forest's Curse"],
+					"abilities": ["Natural Cure"]
+				}
+			],
+			"vivillon": [
+				{
+					"species": "Vivillon",
+					"gender": "F",
+					"moves": ["Hurricane", "Bug Buzz", "Dazzling Gleam", "Protect"],
+					"abilities": ["Shield Dust", "Compoundeyes"]
+				}
+			],
+			"slowking": [
+				{
+					"species": "Slowking",
+					"gender": "M",
+					"moves": ["Future Sight", "Hydro Pump", "Blizzard", "Metronome"],
+					"abilities": ["Oblivious", "Own Tempo"]
+				}
+			]
+		}
+	},
+	"Xavi": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/Z-A_Royale_Profile_Xavi.png/173px-Z-A_Royale_Profile_Xavi.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Psychic"],
+		"pokemon": {
+			"scolipede": [
+				{
+					"species": "Scolipede",
+					"gender": "M",
+					"moves": ["Megahorn", "Gunk Shot", "Earthquake", "Spikes"],
+					"abilities": ["Poison Point", "Swarm"]
+				}
+			],
+			"slowking": [
+				{
+					"species": "Slowking",
+					"gender": "M",
+					"moves": ["Future Sight", "Hydro Pump", "Blizzard", "Metronome"],
+					"abilities": ["Oblivious", "Own Tempo"]
+				}
+			],
+			"roserade": [
+				{
+					"species": "Roserade",
+					"gender": "M",
+					"moves": ["Spikes", "Toxic Spikes", "Energy Ball", "Dazzling Gleam"],
+					"abilities": ["Natural Cure", "Poison Point"]
+				}
+			],
+			"alakazam": [
+				{
+					"species": "Alakazam",
+					"gender": "M",
+					"moves": ["Psychic", "Reflect", "Shadow Ball", "Focus Blast"],
+					"abilities": ["Synchronize", "Inner Focus"]
+				}
+			],
+			"furfrou": [
+				{
+					"species": "Furfrou",
+					"gender": "M",
+					"moves": ["Fire Fang", "Thunder Fang", "Ice Fang", "Crunch"],
+					"abilities": ["Fur Coat"]
+				}
+			],
+			"slowbro": [
+				{
+					"species": "Slowbro",
+					"gender": "F",
+					"moves": ["Psychic", "Flamethrower", "Hydro Pump", "Shadow Ball"],
+					"abilities": ["Oblivious", "Own Tempo"]
+				}
+			]
+		}
+	},
+	"Andi": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/Infinite_Z-A_Royale_Profile_Andi.png/173px-Infinite_Z-A_Royale_Profile_Andi.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"essentialPokemon": {
+			"pancham": [
+				{
+					"species": "Pancham",
+					"gender": "F",
+					"moves": ["Brick Break", "Body Slam", "Detect", "Crunch"],
+					"abilities": ["Mold Breaker"],
+					"items": ["Eviolite"]
+				}
+			],
+			"pangoro": [
+				{
+					"species": "Pangoro",
+					"gender": "F",
+					"moves": ["Brick Break", "Body Slam", "Detect", "Crunch"],
+					"abilities": ["Mold Breaker"]
+				}
+			]
+		},
+		"pokemon": {
+			"carbink": [
+				{
+					"species": "Carbink",
+					"moves": ["Stealth Rock", "Moonblast", "Light Screen", "Stone Edge"],
+					"abilities": ["Clear Body"]
+				}
+			],
+			"gogoat": [
+				{
+					"species": "Gogoat",
+					"gender": "F",
+					"moves": ["Earthquake", "Leaf Blade", "Megahorn", "Bulk Up"],
+					"abilities": ["Sap Sipper"]
+				}
+			],
+			"klefki": [
+				{
+					"species": "Klefki",
+					"gender": "F",
+					"moves": ["Dazzling Gleam", "Flash Cannon", "Draining Kiss", "Calm Mind"],
+					"abilities": ["Prankster"]
+				}
+			],
+			"audino": [
+				{
+					"species": "Audino",
+					"gender": "F",
+					"moves": ["Hyper Voice", "Wish", "Take Down", "Zen Headbutt"],
+					"abilities": ["Regenerator"]
 				}
 			]
 		}
