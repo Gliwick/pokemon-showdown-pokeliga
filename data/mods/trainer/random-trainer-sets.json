@@ -6019,7 +6019,7 @@
 					"abilities": ["Intimidate"]
 				}
 			],
-			"eevelution": [
+			"eeveelution": [
 				{
 					"species": "Vaporeon",
 					"gender": "M",
@@ -12124,7 +12124,7 @@
 				"name": "Brendan"
 			},
 			{
-				"id": "Sygna",
+				"id": "Brendan Sygna",
 				"link": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/VSBrendan_Sygna_Masters.png/120px-VSBrendan_Sygna_Masters.png",
 				"name": "Brendan",
 				"tiers": ["Veteran"]
@@ -12137,23 +12137,35 @@
 				"tiers": ["Veteran"]
 			},
 			{
-				"id": "Anime",
+				"id": "May Anime",
 				"link": "https://www.serebii.net/anime/pictures/kanto/450/AG178.jpg",
 				"tiers": ["Ace"],
 				"name": "May"
 			},
 			{
-				"id": "Anniversary",
+				"id": "May Anniversary",
 				"link": "https://archives.bulbagarden.net/media/upload/thumb/d/d7/VSMay_Anniversary_2022_Masters.png/120px-VSMay_Anniversary_2022_Masters.png",
 				"tiers": ["Veteran"],
+				"name": "May"
+			},
+			{
+				"id": "Brendan Champion",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/8/89/VSBrendan_Champion_Masters.png/120px-VSBrendan_Champion_Masters.png",
+				"tiers": ["Uber"],
+				"name": "Brendan"
+			},
+			{
+				"id": "May Champion",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/8/86/VSMay_Champion_Masters.png/120px-VSMay_Champion_Masters.png",
+				"tiers": ["Uber"],
 				"name": "May"
 			}
 		],
 		"gen": 3,
 		"link": "Player_character",
-		"tiers": ["Veteran", "Ace"],
+		"tiers": ["Uber", "Veteran", "Ace"],
 		"essentialBySprite": {
-			"Sygna": {
+			"Brendan Sygna": {
 				"lati": [
 					{
 						"species": "Latios",
@@ -12165,7 +12177,7 @@
 					}
 				]
 			},
-			"Anime":{
+			"May Anime":{
 				"starter": [
 					{
 						"species": "Blaziken",
@@ -12175,7 +12187,7 @@
 					}
 				]
 			},
-			"Anniversary": {
+			"May Anniversary": {
 				"lati": [
 					{
 						"species": "Latias",
@@ -12186,45 +12198,30 @@
 						"teraTypes": ["Psychic"]
 					}
 				]
-			}
-		},
-		"essentialByTier": {
-			"Veteran": {
-				"starter": [
+			},
+			"Brendan Champion": {
+				"groudon": [
 					{
-						"species": "Blaziken",
-						"gender": "F",
-						"moves": ["Blaze Kick", "Brick Break", "Quick Attack", "Shadow Claw"],
-						"abilities": ["Speed Boost"],
-						"items": ["Life Orb"]
-					},
-					{
-						"species": "Swampert",
-						"gender": "F",
-						"moves": ["Earthquake", "Muddy Water", ["Rock Slide", "Brick Break"], "Rain Dance"],
-						"abilities": ["Torrent"],
-						"items": ["Damp Rock"],
-						"level": 51
-					}
-				],
-				"claydol": [
-					{
-						"species": "Claydol",
-						"moves": ["Light Screen", "Reflect", "Earth Power", "Psychic"],
-						"abilities": ["Levitate"],
-						"items": ["Light Clay"]
-					}
-				],
-				"exploud": [
-					{
-						"species": "Exploud",
-						"gender": "F",
-						"moves": ["Hyper Voice", "Fire Blast", "Blizzard", "Shadow Ball"],
-						"abilities": ["Soundproof"],
-						"items": ["Assault Vest"]
+						"species": "Groudon",
+						"moves": ["Precipice Blades", "Swords Dance", "Fire Fang", ["Iron Head", "Rock Slide", "Zen Headbutt"]],
+						"abilities": ["Drought"],
+						"items": ["Soft Sand"],
+						"teraTypes": ["Fire"]
 					}
 				]
 			},
+			"May Champion": {
+				"kyogre": [
+					{
+						"species": "Kyogre",
+						"moves": ["Origin Pulse", "Thunder", "Rain Dance", "Thunder"],
+						"abilities": ["Drizzle"],
+						"items": ["Mystic Water"]
+					}
+				]
+			}
+		},
+		"essentialByTier": {
 			"Ace": {
 				"starter": [
 					{
@@ -12238,6 +12235,46 @@
 					}
 				]
 			}
+		},
+		"essentialPokemon": {
+			"starter": [
+				{
+					"species": "Blaziken",
+					"gender": "F",
+					"moves": ["Blaze Kick", "Brick Break", "Quick Attack", "Shadow Claw"],
+					"abilities": ["Speed Boost"],
+					"items": ["Life Orb"],
+					"incompatible": ["Drizzle"]
+				},
+				{
+					"species": "Swampert",
+					"gender": "F",
+					"moves": ["Earthquake", "Muddy Water", ["Rock Slide", "Brick Break"], "Rain Dance"],
+					"abilities": ["Torrent"],
+					"items": ["Damp Rock"],
+					"level": 51,
+					"incompatible": ["Drought"]
+				}
+			],
+			"claydol": [
+				{
+					"species": "Claydol",
+					"moves": ["Light Screen", "Reflect", "Earth Power", "Psychic"],
+					"abilities": ["Levitate"],
+					"items": ["Light Clay"],
+					"tiers": ["Uber", "Veteran"]
+				}
+			],
+			"exploud": [
+				{
+					"species": "Exploud",
+					"gender": "F",
+					"moves": ["Hyper Voice", "Fire Blast", "Blizzard", "Shadow Ball"],
+					"abilities": ["Soundproof"],
+					"items": ["Assault Vest"],
+					"tiers": ["Uber", "Veteran"]
+				}
+			]
 		},
 		"pokemon": {
 			"fwg": [
@@ -15011,8 +15048,17 @@
 					"species": "Malamar",
 					"gender": "M",
 					"moves": ["Poison Jab", "Night Slash", "Psycho Cut", "Slash"],
-					"abilities": ["Suction Cups"],
+					"abilities": ["Contrary", "Suction Cups"],
 					"items": ["Assault Vest"]
+				}
+			],
+			"lucario": [
+				{
+					"species": "Lucario",
+					"gender": "F",
+					"moves": ["Bullet Punch", "Extreme Speed", "Power-Up Punch", "Stone Edge"],
+					"abilities": ["Steadfast", "Inner Focus"],
+					"items": ["Life Orb"]
 				}
 			],
 			"volcarona": [
@@ -15095,14 +15141,6 @@
 					"gender": "F",
 					"moves": ["Ice Punch", "Leech Seed", "Leaf Storm", "Earthquake"],
 					"abilities": ["Snow Warning"]
-				}
-			],
-			"lucario": [
-				{
-					"species": "Lucario",
-					"gender": "F",
-					"moves": ["Bullet Punch", "Extreme Speed", "Power-Up Punch", "Stone Edge"],
-					"abilities": ["Steadfast", "Inner Focus"]
 				}
 			]
 		}
@@ -16307,7 +16345,7 @@
 						"tiers": ["Master"]
 					},
 					{
-						"id": "Halloween",
+						"id": "Hilbert Halloween",
 						"link": "https://archives.bulbagarden.net/media/upload/thumb/0/08/Hilbert_Fall_2020_Emote_3_Masters.png/80px-Hilbert_Fall_2020_Emote_3_Masters.png",
 						"name": "Hilbert",
 						"tiers": ["Master"]
@@ -16317,6 +16355,12 @@
 						"link": "https://archives.bulbagarden.net/media/upload/thumb/1/18/VSHilbert_Sygna_Masters.png/120px-VSHilbert_Sygna_Masters.png",
 						"name": "Hilbert",
 						"tiers": ["Master"]
+					},
+					{
+						"id": "Hilbert Champion",
+						"link": "https://serebii.net/pokemonmasters/syncpairs/hilbert-champion.pngg",
+						"name": "Hilbert",
+						"tiers": ["Uber"]
 					},
 					{
 						"id": "Hilda",
@@ -16334,6 +16378,12 @@
 					{
 						"id": "Hilda Sygna",
 						"link": "https://archives.bulbagarden.net/media/upload/thumb/b/bb/VSHilda_Sygna_Masters.png/120px-VSHilda_Sygna_Masters.png",
+						"name": "Hilda",
+						"tiers": ["Master"]
+					},
+					{
+						"id": "Hilda Champion",
+						"link": "https://serebii.net/pokemonmasters/syncpairs/hilda-champion.png",
 						"name": "Hilda",
 						"tiers": ["Master"]
 					},
@@ -16372,7 +16422,7 @@
 				],
 				"tiers": ["Uber", "Master"],
 				"essentialBySprite": {
-					"Halloween": {
+					"Hilbert Halloween": {
 						"mightyena": [
 							{
 								"species": "Mightyena",
@@ -16391,6 +16441,17 @@
 								"abilities": ["Download"],
 								"items": ["Burn Drive", "Chill Drive", "Douse Drive", "Shovk Drive"],
 								"teraTypes": ["Bug"]
+							}
+						]
+					},
+					"Hilbert Champion": {
+						"genesect": [
+							{
+								"species": "Kyurem-White",
+								"moves": ["Ice Beam", "Ancient Power", "Ice Burn", "Fusion Flare"],
+								"abilities": ["Turboblaze"],
+								"teraTypes": ["Ice"],
+								"shiny": true
 							}
 						]
 					},
@@ -16413,6 +16474,17 @@
 								"abilities": ["Victory Star"],
 								"items": ["Charcoal"],
 								"teraTypes": ["Fire"]
+							}
+						]
+					},
+					"Hilda Champion": {
+						"ironleaves": [
+							{
+								"species": "Iron Leaves",
+								"moves": ["Giga Impact", "Swords Dance", "Psyblade", "Electric Terraine"],
+								"abilities": ["Quark Drive"],
+								"items": ["Twisted Spoon"],
+								"teraTypes": ["Psychic"]
 							}
 						]
 					},
@@ -24794,7 +24866,7 @@
 					"gender": "M",
 					"moves": ["Overdrive", "Hex", "Boomburst", "Sludge Bomb"],
 					"abilities": ["Punk Rock"],
-					 "teraTypes": ["Ghost"]
+					"teraTypes": ["Ghost"]
 				}
 			]
 		},
@@ -27520,6 +27592,7 @@
 			}
 		],
 		"gen": 6,
+		"link": "Team_Flare",
 		"tiers": ["Ace"],
 		"types": ["Dark"],
 		"essentialBySprite": {
@@ -29736,7 +29809,7 @@
 				{
 					"species": "Meganium",
 					"gender": "M",
-					"moves": ["Leech Seed", "Earth Power", "Dazzling Gleam", "Giga Drain"],
+					"moves": [["Leech Seed", "Frenzy Plant"], "Earth Power", "Dazzling Gleam", "Giga Drain"],
 					"abilities": ["Overgrow"],
 					"teraTypes": ["Fairy"]
 				}
@@ -29745,7 +29818,7 @@
 				{
 					"species": "Emboar",
 					"gender": "M",
-					"moves": ["Flare Blitz", "Stone Edge", "Thunder Punch", "Bulk Up"],
+					"moves": ["Flare Blitz", "Stone Edge", ["Thunder Punch", "Close Combat"], "Bulk Up"],
 					"abilities": ["Blaze"],
 					"items": ["Leftovers"]
 				}
@@ -29754,7 +29827,7 @@
 				{
 					"species": "Feraligatr",
 					"gender": "M",
-					"moves": ["Breaking Swipe", "Liquidation", "Ice Fang", "Bulldoze"],
+					"moves": ["Outrage", "Liquidation", ["Ice Fang", "Swords Dance"], "Bulldoze"],
 					"abilities": ["Torrent"],
 					"teraTypes": ["Dragon"],
 					"items": ["Life Orb"]
@@ -29773,24 +29846,28 @@
 			"meowstic": [
 				{
 					"species": "Meowstic-M",
-					"moves": ["Light Screen", "Reflect", "Psychic", "Thunderbolt"],
-					"abilities": ["Keen Eye", "Infiltrator"]
+					"gender": "M",
+					"moves": ["Light Screen", "Reflect", "Psychic", ["Thunderbolt", "Wish"]],
+					"abilities": ["Keen Eye", "Infiltrator"],
+					"items": ["Life Orb"]
 				}
 			],
 			"goodra": [
 				{
 					"species": "Goodra",
 					"gender": "M",
-					"moves": ["Surf", "Toxic", "Draco Meteor", "Blizzard"],
-					"abilities": ["Sap Sipper"]
+					"moves": ["Surf", ["Toxic", "Acid Spray"], "Draco Meteor", "Blizzard"],
+					"abilities": ["Sap Sipper"],
+					"items": ["Assault Vest"]
 				}
 			],
 			"avalugg": [
 				{
 					"species": "Avalugg",
 					"gender": "M",
-					"moves": ["Icicle Crash", "Crunch", "Stone Edge", "Protect"],
-					"abilities": ["Own Tempo"]
+					"moves": [["Icicle Crash", "Icicle Spear"], "Crunch", "Stone Edge", "Protect"],
+					"abilities": ["Own Tempo"],
+					"items": ["Leftovers"]
 				}
 			],
 			"manectric": [
@@ -29798,7 +29875,8 @@
 					"species": "Manectric",
 					"gender": "M",
 					"moves": ["Snarl", "Thunder", "Overheat", "Protect"],
-					"abilities": ["Static", "Lightning Rod"]
+					"abilities": ["Static", "Lightning Rod"],
+					"items": ["Life Orb"]
 				}
 			]
 		}
@@ -29934,7 +30012,10 @@
 					"gender": "M",
 					"moves": ["Gunk Shot", "Protect", "X-Scissor", "Earthquake"],
 					"abilities": ["Poison Point", "Swarm"],
-					"items": ["Leftovers"]
+					"items": ["Leftovers"],
+					"natures": ["Relaxed"],
+					"evs": {"def": 204, "spe": 0},
+					"ivs": {"spe": 0}
 				}
 			]
 		},
@@ -30105,8 +30186,6 @@
 	"Katherine": {
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/1/16/VSFurisode_Girl_4.png/170px-VSFurisode_Girl_4.png",
 		"gen": 6,
-		"tiers": ["Ace"],
-		"types": ["Fire"],
 		"essentialPokemon": {
 			"slurpuff": [
 				{
@@ -30132,7 +30211,7 @@
 				{
 					"species": "Cherrim",
 					"gender": "F",
-					"moves": ["Seed Bomb", "Return", "Morning Sun", "Sunny Day"],
+					"moves": ["Seed Bomb", "Take Down", "Morning Sun", "Sunny Day"],
 					"abilities": ["Flower Gift"],
 					"items": ["Heat Rock"]
 				}
@@ -30146,20 +30225,34 @@
 					"items": ["Heat Rock"]
 				}
 			],
-			"chandelure": [
-				{
-					"species": "Chandelure",
-					"gender": "F",
-					"moves": ["Fire Spin", "Energy Ball", "Shadow Ball", "Flamethrower"],
-					"abilities": ["Flash Fire", "Flame Body"]
-				}
-			],
 			"flareon": [
 				{
 					"species": "Flareon",
-					"gender": "M",
-					"moves": ["Iron Tail", "Flame Wheel", "Fire Spin", "Dig"],
-					"abilities": ["Flash Fire"]
+					"moves": ["Superpower", "Giga Impact", ["Will-O-Wisp", "Bite"], ["Overheat", "Fire Fang"]],
+					"abilities": ["Flash Fire"],
+					"items": ["White Herb"]
+				}
+			],
+			"umbreon": [
+				{
+					"species": "Umbreon",
+					"moves": ["Confuse Ray", "Payback", "Curse", "Moonlight"],
+					"abilities": ["Synchronize"],
+					"items": ["Leftovers"]
+				},
+				{
+					"species": "Umbreon",
+					"moves": ["Payback", "Moonlight", "Stored Power", "Work Up"],
+					"abilities": ["Synchronize"],
+					"items": ["Chople Berry"]
+				}
+			],
+			"leafeon": [
+				{
+					"species": "Leafeon",
+					"moves": ["Sunny Day", "Leaf Blade", "X-Scissor", "Synthesis"],
+					"abilities": ["Leaf Guard"],
+					"items": ["Heat Rock"]
 				}
 			]
 		}
@@ -30168,7 +30261,7 @@
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/d/d2/VSFurisode_Girl_3.png/170px-VSFurisode_Girl_3.png",
 		"gen": 6,
 		"tiers": ["Ace"],
-		"types": ["Steel"],
+		"types": ["Fairy"],
 		"essentialPokemon": {
 			"gardevoir": [
 				{
@@ -30177,6 +30270,30 @@
 					"moves": ["Moonblast", "Charge Beam", "Calm Mind", ["Draining Kiss", "Healing Wish", "Wish"]],
 					"abilities": ["Synchronize", "Trace"],
 					"items": ["Fairy Feather"]
+				}
+			],
+			"klefki": [
+				{
+					"species": "Klefki",
+					"gender": "F",
+					"moves": ["Psychic", "Flash Cannon", "Draining Kiss"],
+					"abilities": ["Prankster"]
+				}
+			],
+			"granbull": [
+				{
+					"species": "Granbull",
+					"gender": "F",
+					"moves": ["Double-Edge", "Earthquake", "Wild Charge", "Outrage"],
+					"abilities": ["Intimidate", "Quick Feet"],
+					"items": ["Sitrus Berry"]
+				},
+				{
+					"species": "Granbull",
+					"gender": "F",
+					"moves": ["Fire Fang", "Ice Fang", "Play Rough", "Crunch"],
+					"abilities": ["Intimidate", "Quick Feet"],
+					"items": ["Life Orb"]
 				}
 			],
 			"hippowdon": [
@@ -30207,37 +30324,38 @@
 					"abilities": ["Sand Veil"],
 					"items": ["Smooth Rock"]
 				}
-			],
-			"bronzong": [
-				{
-					"species": "Bronzong",
-					"moves": ["Trick Room", "Extrasensory", "Flash Cannon", "Protect"],
-					"abilities": ["Heatproof"]
-				}
-			],
-			"klefki": [
-				{
-					"species": "Klefki",
-					"moves": ["Psychic", "Flash Cannon", "Draining Kiss"],
-					"abilities": ["Prankster"]
-				}
-			],
-			"lucario": [
-				{
-					"species": "Lucario",
-					"gender": "F",
-					"moves": ["Water Pulse", "Aura Sphere", "Bullet Punch", "Dragon Pulse"],
-					"abilities": ["Steadfast", "Inner Focus"]
-				}
 			]
 		}
 	},
-	"Thalassa": {
+	"Linnea": {
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/VSFurisode_Girl_2.png/170px-VSFurisode_Girl_2.png",
 		"gen": 6,
-		"tiers": ["Ace"],
+		"link": "Furisode_Girl_(Trainer_class)",
 		"types": ["Water"],
 		"essentialPokemon": {
+			"aromatisse": [
+				{
+					"species": "Aromatisse",
+					"gender": "F",
+					"moves": ["Round", "Psychic", "Energy Ball", "Dazzling Gleam"],
+					"abilities": ["Healer"],
+					"items": ["Assault Vest"]
+				},
+				{
+					"species": "Aromatisse",
+					"gender": "F",
+					"moves": ["Flash Cannon", "Thunder", "Psyshock", "Moonblast"],
+					"abilities": ["Healer"],
+					"items": ["Expert Belt"]
+				},
+				{
+					"species": "Aromatisse",
+					"gender": "F",
+					"moves": ["Calm Mind", "Dazzling Gleam", "Psyshock", "Moonblast"],
+					"abilities": ["Healer"],
+					"items": ["Leftovers"]
+				}
+			],
 			"politoed": [
 				{
 					"species": "Politoed",
@@ -30267,34 +30385,32 @@
 					"items": ["Damp Rock"]
 				}
 			],
-			"slowking": [
-				{
-					"species": "Slowking",
-					"gender": "M",
-					"moves": ["Trick Room", "Zen Headbutt", "Scald", "Brick Break"],
-					"abilities": ["Oblivious"]
-				}
-			],
-			"electic": [
-				{
-					"species": "Raichu",
-					"gender": "M",
-					"moves": ["Thunderbolt", "Surf", "Thunder", "Iron Tail"],
-					"abilities": ["Static"]
-				},
-				{
-					"species": "Jolteon",
-					"gender": "M",
-					"moves": [["Thunderbolt", "Discharge"], "Shadow Ball", "Thunder", "Hyper Voice"],
-					"abilities": ["Volt Absorb"]
-				}
-			],
 			"vaporeon": [
 				{
 					"species": "Vaporeon",
+					"moves": ["Wish", "Surf", "Calm Mind", "Shadow Ball"],
+					"abilities": ["Water Absorb"],
+					"items": ["Quick Claw"]
+				},
+				{
+					"species": "Vaporeon",
+					"moves": ["Ice Beam", "Hydro Pump", "Acid Armor", "Aqua Ring"],
+					"abilities": ["Water Absorb"],
+					"items": ["Leftovers"]
+				},
+				{
+					"species": "Vaporeon",
+					"moves": ["Surf", "Ice Beam", "Shadow Ball", "Alluring Voice"],
+					"abilities": ["Water Absorb"],
+					"items": ["Expert Belt"]
+				}
+			],
+			"jolteon": [
+				{
+					"species": "Jolteon",
 					"gender": "M",
-					"moves": ["Ice Beam", "Hydro Pump", "Surf", "Blizzard"],
-					"abilities": ["Hydration"]
+					"moves": ["Thunder", "Shadow Ball", "Rain Dance", "Yawn"],
+					"abilities": ["King's Rock"]
 				}
 			]
 		}
@@ -30302,7 +30418,6 @@
 	"Kali": {
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/8/82/VSFurisode_Girl_1.png/170px-VSFurisode_Girl_1.png",
 		"gen": 6,
-		"tiers": ["Ace"],
 		"types": ["Ice"],
 		"essentialPokemon": {
 			"azumarill": [
@@ -30342,21 +30457,32 @@
 					"items": ["Icy Rock"]
 				}
 			],
-			"beartic": [
-				{
-					"species": "Beartic",
-					"gender": "F",
-					"moves": ["Icicle Crash", "Rock Slide", "Dive", "Snowscape"],
-					"abilities": ["Slush Rush"],
-					"items": ["Icy Rock"]
-				}
-			],
 			"vaporeon": [
 				{
 					"species": "Vaporeon",
-					"gender": "M",
-					"moves": ["Ice Beam", "Hydro Pump", "Surf", "Blizzard"],
-					"abilities": ["Water Absorb"]
+					"moves": ["Muddy Water", "Blizzard", "Aqua Ring", "Yawn"],
+					"abilities": ["Water Absorb"],
+					"items": ["Leftovers"]
+				}
+			],
+			"glaceon": [
+				{
+					"species": "Glaceon",
+					"moves": ["Frost Breath", "Shadow Ball", "Rest", "Barrier"],
+					"abilities": ["Snow Cloak"],
+					"items": ["Chesto Berry"]
+				},
+				{
+					"species": "Glaceon",
+					"moves": ["Snowscape", "Blizzard", "Mirror Coat", "Hyper Beam"],
+					"abilities": ["Snow Cloak"],
+					"items": ["Focus Sash"]
+				},
+				{
+					"species": "Glaceon",
+					"moves": ["Blizzard", "Shadow Ball", "Alluring Voice", "Detect"],
+					"abilities": ["Snow Cloak"],
+					"items": ["Bright Powder"]
 				}
 			]
 		}
@@ -30661,6 +30787,448 @@
 					"gender": "F",
 					"moves": ["Hyper Voice", "Wish", "Take Down", "Zen Headbutt"],
 					"abilities": ["Regenerator"]
+				}
+			]
+		}
+	},
+	"Rintaro": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/e/e5/Infinite_Z-A_Royale_Profile_Rintaro.png/250px-Infinite_Z-A_Royale_Profile_Rintaro.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"essentialPokemon": {
+			"simisage": [
+				{
+					"species": "Simisage",
+					"gender": "M",
+					"moves": ["Protect", "Giga Drain", "Crunch", "Rock Tomb"],
+					"abilities": ["Gluttony"],
+					"items": ["Occa Berry"]
+				}
+			],
+			"simipour": [
+				{
+					"species": "Simipour",
+					"gender": "M",
+					"moves": ["Protect", "Liquidation", "Ice Beam", "Gunk Shot"],
+					"abilities": ["Gluttony"],
+					"items": ["Rindo Berry"]
+				}
+			],
+			"simisear": [
+				{
+					"species": "Simisear",
+					"gender": "M",
+					"moves": ["Protect", "Fire Blast", "Solar Beam", "Flame Wheel"],
+					"abilities": ["Gluttony"],
+					"items": ["Passho Berry"]
+				}
+			]
+		},
+		"pokemon": {
+			"umbreon": [
+				{
+					"species": "Umbreon",
+					"gender": "M",
+					"moves": ["Protect", "Snarl", "Moonlight", "Toxic"],
+					"abilities": ["Synchronize"]
+				}
+			],
+			"espeon": [
+				{
+					"species": "Espeon",
+					"gender": "M",
+					"moves": ["Protect", "Power Gem", "Charm", "Psychic"],
+					"abilities": ["Synchronize"]
+				}
+			],
+			"eeveelution":[
+				{
+					"species": "Jolteon",
+					"gender": "M",
+					"moves": ["Thunderbolt", "Shadow Ball", "Discharge", "Hyper Voice"],
+					"abilities": ["Volt Absorb"]
+				},
+				{
+					"species": "Vaporeon",
+					"gender": "M",
+					"moves": ["Ice Beam", "Hydro Pump", "Surf", "Blizzard"],
+					"abilities": ["Hydration"]
+				},
+				{
+					"species": "Flareon",
+					"gender": "M",
+					"moves": ["Iron Tail", "Fire Fang", "Fire Spin", "Dig"],
+					"abilities": ["Flash Fire"]
+				}
+			]
+		}
+	},
+	"Korrina": {
+		"sprite": [
+			{
+				"id": "REGULAR",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/3/38/VSKorrina_2.png/200px-VSKorrina_2.png",
+				"tiers": ["Veteran"]
+			},
+			{
+				"id": "Sygna",
+				"link": "https://archives.bulbagarden.net/media/upload/thumb/a/a7/VSLysandre_Sygna_Masters.png/120px-VSLysandre_Sygna_Masters.png",
+				"tiers": ["Uber"]
+			}
+		],
+		"gen": 6,
+		"tiers": ["Uber", "Veteran"],
+		"types": ["Fighting"],
+		"essentialBySprite": {
+			"Sygna": {
+				"marshadow": [
+					{
+						"species": "Marshadow",
+						"moves": ["Spectral Thief", "Shadow Punch", ["Blaze Kick", "Stone Edge"], ["Agility", "Bulk Up"]],
+						"abilities": ["Technician"],
+						"items": ["Spell Tag"]
+					}
+				]
+			}
+		},
+		"essentialPokemon": {
+			"lucario": [
+				{
+					"species": "Lucario",
+					"gender": "M",
+					"moves": ["Aura Sphere", "Dragon Pulse", "Extreme Speed", ["Dark Pulse", "Close Combat"]],
+					"abilities": ["Steadfast"],
+					"items": ["Life Orb"],
+					"natures": ["Hasty"]
+				},
+				{
+					"species": "Lucario",
+					"gender": "M",
+					"moves": ["Focus Blast", "Hyper Beam", "Detect", ["Extreme Speed", "Flash Cannon"]],
+					"abilities": ["Steadfast", "Inner Focus"],
+					"items": ["Life Orb"],
+					"natures": ["Hasty"]
+				},
+				{
+					"species": "Lucario",
+					"gender": "M",
+					"moves": ["Focus Blast", "Hyper Beam", "Extreme Speed", "Flash Cannon"],
+					"abilities": ["Steadfast", "Inner Focus"],
+					"items": ["Choice Scarf"],
+					"natures": ["Hasty"]
+				}
+			],
+			"hawlucha": [
+				{
+					"species": "Hawlucha",
+					"gender": "F",
+					"moves": ["Flying Press", "Hone Claws", "High Jump Kick", "X-Scissor"],
+					"abilities": ["Limber"],
+					"items": ["Life Orb"]
+				},
+				{
+					"species": "Hawlucha",
+					"gender": "F",
+					"moves": ["Flying Press", "Swords Dance", "Feather Dance", "Brave Bird"],
+					"abilities": ["Limber"],
+					"items": ["Life Orb"]
+				}
+			],
+			"bad": [
+				{
+					"species": "Machamp",
+					"gender": "M",
+					"moves": ["Revenge", "Cross Chop", "Earthquake", "Stone Edge"],
+					"abilities": ["Guts"]
+				},
+				{
+					"species": "Machamp",
+					"gender": "M",
+					"moves": ["Dynamic Punch", "Close Combat", "Bulk Up", "Low Sweep"],
+					"abilities": ["No Guard"]
+				},
+				{
+					"species": "Sirfetch'd",
+					"gender": "F",
+					"moves": ["Swords Dance", "Meteor Assault", "First Impression", "Detect"],
+					"abilities": ["Steadfast"]
+				}
+			]
+		},
+		"pokemon": {
+			"gallade": [
+				{
+					"species": "Gallade",
+					"moves": ["Sacred Sword", "Close Combat", "Bulk Up", "Psycho Cut"],
+					"abilities": ["Sharpness"],
+					"items": ["Life Orb"]
+				}
+			],
+			"crabominable": [
+				{
+					"species": "Crabominable",
+					"gender": "F",
+					"moves": ["Ice Hammer", "Iron Defense", "Dynamic Punch", "Mach Punch"],
+					"abilities": ["Hyper Cutter", "Iron Fist"],
+					"items": ["Leftovers"]
+				}
+			],
+			"medicham": [
+				{
+					"species": "Medicham",
+					"gender": "F",
+					"moves": ["Zen Headbutt", "Dynamic Punch", "Ice Punch", "Recover"],
+					"abilities": ["Pure Power"],
+					"items": ["Life Orb"]
+				}
+			],
+			"chesnaught": [
+				{
+					"species": "Chesnaught",
+					"gender": "F",
+					"moves": ["Spiky Shield", "Close Combat", "Wood Hammer", "Stone Edge"],
+					"abilities": ["Overgrow"],
+					"items": ["Leftovers"]
+				}
+			]
+		}
+	},
+	"Naveen": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/2/25/VSNaveen.png/250px-VSNaveen.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Dark"],
+		"essentialPokemon": {
+			"scrafty": [
+				{
+					"species": "Scrafty",
+					"gender": "M",
+					"moves": ["Iron Tail", "Ice Punch", "Power-Up Punch", "Crunch"],
+					"abilities": ["Shed Skin", "Moxie"],
+					"items": ["Life Orb"]
+				}
+			]
+		},
+		"pokemon": {
+			"ariados": [
+				{
+					"species": "Ariados",
+					"gender": "M",
+					"moves": ["Megahorn", "Poison Jab", "Sticky Web", "Leech Life"],
+					"abilities": ["Swarm", "Insomnia"]
+				}
+			],
+			"sableye": [
+				{
+					"species": "Sableye",
+					"gender": "M",
+					"moves": ["Shadow Claw", "Zen Headbutt", "Confuse Ray", "Power Gem"],
+					"abilities": ["Keen Eye"]
+				}
+			],
+			"krookodile": [
+				{
+					"species": "Krookodile",
+					"gender": "M",
+					"moves": ["Crunch", "Iron Tail", "Earthquake", "Sand Tomb"],
+					"abilities": ["Intimidate", "Moxie"]
+				}
+			],
+			"aegislash": [
+				{
+					"species": "Aegislash",
+					"gender": "M",
+					"moves": ["King's Shield", "Shadow Ball", "Flash Cannon", "Close Combat"],
+					"abilities": ["Stance Change"]
+				}
+			],
+			"toxtricity": [
+				{
+					"species": "Toxtricity-Low-Key",
+					"gender": "M",
+					"moves": ["Overdrive", "Boomburst", "Acid Spray", "Snarl"],
+					"abilities": ["Punk Rock"]
+				}
+			]
+		}
+	},
+	"Lida": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/5/59/VSLida.png/250px-VSLida.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Water"],
+		"essentialPokemon": {
+			"starmie": [
+				{
+					"species": "Starmie",
+					"moves": ["Zen Headbutt", "Liquidation", "Bulk Up", "Blizzard"],
+					"abilities": ["Natural Cure"],
+					"items": ["Life Orb"],
+					"evs": {"atk": 252}
+				}
+			]
+		},
+		"pokemon": {
+			"clawitzer": [
+				{
+					"species": "Clawitzer",
+					"gender": "F",
+					"moves": ["Dark Pulse", "Aura Sphere", "Water Pulse", "Mud Shot"],
+					"abilities": ["Mega Launcher"]
+				}
+			],
+			"vanilluxe": [
+				{
+					"species": "Vanilluxe",
+					"gender": "F",
+					"moves": ["Ice Beam", "Icy Wind", "Flash Cannon", "Icicle Crash"],
+					"abilities": ["Snow Warning"]
+				}
+			],
+			"emolga": [
+				{
+					"species": "Emolga",
+					"gender": "F",
+					"moves": ["Volt Switch", "Air Slash", "U-turn", "Iron Tail"],
+					"abilities": ["Static"]
+				}
+			],
+			"vaporeon": [
+				{
+					"species": "Vaporeon",
+					"gender": "F",
+					"moves": ["Aqua Ring", "Blizzard", "Surf", "Shadow Ball"],
+					"abilities": ["Water Absorb"]
+				}
+			],
+			"tatsugiri": [
+				{
+					"species": "Tatsugiri",
+					"gender": "F",
+					"moves": ["Nasty Plot", "Scald", "Dragon Pulse", "Mimic"],
+					"abilities": ["Storm Drain"]
+				}
+			]
+		}
+	},
+	"Vinnie": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/1/11/VSVinnie.png/250px-VSVinnie.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Uber"],
+		"essentialPokemon": {
+			"drampa": [
+				{
+					"species": "Drampa",
+					"gender": "M",
+					"moves": ["Draco Meteor", "Icy Wind", "Flamethrower", "Calm Mind"],
+					"abilities": ["Berserk", "Sap Sipper"],
+					"items": ["Leftovers", "Life Orb"]
+				}
+			],
+			"magearna": [
+				{
+					"species": "Magearna",
+					"moves": ["Fleur Cannon", "Aura Sphere", "Flash Cannon", "Iron Head"],
+					"abilities": ["Soul-Heart"],
+					"items": ["Life Orb"]
+				}
+			]
+		},
+		"pokemon": {
+			"houndoom": [
+				{
+					"species": "Houndoom",
+					"gender": "M",
+					"moves": ["Flamethrower", "Fire Spin", "Snarl", "Sludge Bomb"],
+					"abilities": ["Early Bird", "Flash Fire"]
+				}
+			],
+			"sharpedo": [
+				{
+					"species": "Sharpedo",
+					"gender": "M",
+					"moves": ["Whirlpool", "Aqua Jet", "Night Slash", "Slash"],
+					"abilities": ["Rough Skin"]
+				}
+			],
+			"glalie": [
+				{
+					"species": "Glalie",
+					"gender": "M",
+					"moves": ["Freeze-Dry", "Earthquake", "Ice Beam", "Iron Head"],
+					"abilities": ["Inner Focus"]
+				}
+			],
+			"lopunny": [
+				{
+					"species": "Lopunny",
+					"gender": "M",
+					"moves": ["Protect", "Dynamic Punch", "Draining Kiss", "Bounce"],
+					"abilities": ["Cute Charm"]
+				}
+			]
+		}
+	},
+	"Gwynn": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/c/c2/Infinite_Z-A_Royale_Profile_Gwynn.png/250px-Infinite_Z-A_Royale_Profile_Gwynn.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"types": ["Ghost"],
+		"essentialPokemon": {
+			"chandelure": [
+				{
+					"species": "Chandelure",
+					"gender": "F",
+					"moves": ["Flamethrower", "Calm Mind", "Psychic", "Shadow Ball"],
+					"abilities": ["Flash Fire", "Flame Body"],
+					"items": ["Life Orb"]
+				}
+			]
+		},
+		"pokemon": {
+			"banette": [
+				{
+					"species": "Banette",
+					"gender": "F",
+					"moves": ["Phantom Force", "Shadow Claw", "Knock Off", "Heal Block"],
+					"abilities": ["Insomnia"]
+				}
+			],
+			"gourgeist": [
+				{
+					"species": "Gourgeist-Small",
+					"gender": "F",
+					"moves": ["Trick-or-Treat", "Shadow Claw", "Power Whip", "Foul Play"],
+					"abilities": ["Pickup"]
+				}
+			],
+			"gengar": [
+				{
+					"species": "Gengar",
+					"gender": "F",
+					"moves": ["Shadow Ball", "Dazzling Gleam", "Sludge Bomb", "Hypnosis"],
+					"abilities": ["Cursed Body"]
+				}
+			],
+			"froslass": [
+				{
+					"species": "Froslass",
+					"gender": "F",
+					"moves": ["Shadow Ball", "Ice Beam", "Water Pulse", "Heal Block"],
+					"abilities": ["Snow Cloak"]
+				}
+			],
+			"glalie": [
+				{
+					"species": "Glalie",
+					"gender": "M",
+					"moves": ["Freeze-Dry", "Earthquake", "Ice Beam", "Iron Head"],
+					"abilities": ["Inner Focus"]
 				}
 			]
 		}

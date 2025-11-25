@@ -8,6 +8,8 @@ const LEVEL = 50;
 
 type Tier = 'Uber' | 'Master' | 'Veteran' | 'Ace';
 
+type Tierable<T> = T | Partial<Record<Tier, T>>
+
 type PartialPokemonSet = Pick<PokemonSet, 'species'> & Omit<Partial<PokemonSet>, 'moves' | 'ability' | 'item' | 'nature' | 'teraType'>;
 
 interface MTFormatData extends PartialPokemonSet {
@@ -44,7 +46,7 @@ interface TrainerPokemonSet extends PokemonSet {
 interface Team {
 	readonly sprite?: string | Sprite[];
 	readonly tiers?: Tier[];
-	readonly types?: string[] | Partial<Record<Tier, string[]>>;
+	readonly types?: Tierable<string[]>;
 	readonly essentialPokemon?: Record<string, MTFormatData[]>;
 	readonly essentialByTier?: Partial<Record<Tier, Record<string, MTFormatData[]>>>;
 	readonly essentialBySprite?: Record<string, Record<string, MTFormatData[]>>;
@@ -66,7 +68,7 @@ interface Trainer extends Team {
 	readonly links?: string[];
 	readonly link?: string;
 	readonly gen?: number | 'Anime';
-	readonly game?: 'XD' | 'Colosseum' | 'Battle Revolution' | 'GO' | 'LGPE' | 'PLA';
+	readonly game?: 'XD' | 'Colosseum' | 'Battle Revolution' | 'GO' | 'LGPE' | 'PLA' | 'PLZA';
 	readonly teams?: Team[];
 }
 
@@ -148,13 +150,10 @@ const SEASONAL_TRAINERS: Record<Tier | '*', string[]> = {
 	],
 	'Uber': [],
 	'Master': [
-		// Diancie
+		// Diancie, Paradox
 		'Hilbert/Hilda/Nate/Rosa'
 	],
-	'Veteran': [
-		// Diancie
-		'Diantha'
-	],
+	'Veteran': [],
 	'Ace': [],
 };
 const filterSeasonalTeams = (id: string, team: Team, tier: Tier, isTrainer: boolean): boolean => {
@@ -166,7 +165,7 @@ const filterSeasonalTeams = (id: string, team: Team, tier: Tier, isTrainer: bool
 };
 
 const SEASONAL_SPRITES: Record<string, string[]> = {
-	'Hilbert/Hilda/Nate/Rosa': ['Hilda', 'Hilda Special', 'Hilda Summer', 'Hilda Sygna'],
+	'Hilbert/Hilda/Nate/Rosa': ['Hilda', 'Hilda Special', 'Hilda Champion'],
 	'Aliana/Bryony/Celosia/Mable': ['Mable']
 };
 const filterSeasonalSprites = (sprite: Sprite, trainerId: string, tier: Tier): boolean => (
@@ -317,9 +316,10 @@ export class RandomMTTeams extends RandomTeams {
 			speciesLevel = TIER_SCALE['Master'] - 1;
 		}
 		if (
-			['Gigalith', 'Malamar', 'Reuniclus', 'Wobbuffet'].includes(species.name) ||
+			['Gigalith', 'Reuniclus', 'Wobbuffet'].includes(species.name) ||
 			(species.name === 'Politoed' && abilityName === 'Drizzle') ||
-			(species.name === 'Torkoal' && abilityName === 'Drought')
+			(species.name === 'Torkoal' && abilityName === 'Drought') ||
+			(species.name === 'Malamar' && abilityName === 'Contrary')
 		) {
 			speciesLevel = TIER_SCALE['Ace'] - 1;
 		}
