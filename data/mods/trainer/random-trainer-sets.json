@@ -6019,7 +6019,7 @@
 					"abilities": ["Intimidate"]
 				}
 			],
-			"eevelution": [
+			"eeveelution": [
 				{
 					"species": "Vaporeon",
 					"gender": "M",
@@ -30158,7 +30158,7 @@
 				{
 					"species": "Flareon",
 					"gender": "M",
-					"moves": ["Iron Tail", "Flame Wheel", "Fire Spin", "Dig"],
+					"moves": ["Iron Tail", "Fire Fang", "Fire Spin", "Dig"],
 					"abilities": ["Flash Fire"]
 				}
 			]
@@ -30168,7 +30168,7 @@
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/d/d2/VSFurisode_Girl_3.png/170px-VSFurisode_Girl_3.png",
 		"gen": 6,
 		"tiers": ["Ace"],
-		"types": ["Steel"],
+		"types": ["Fairy"],
 		"essentialPokemon": {
 			"gardevoir": [
 				{
@@ -30177,6 +30177,27 @@
 					"moves": ["Moonblast", "Charge Beam", "Calm Mind", ["Draining Kiss", "Healing Wish", "Wish"]],
 					"abilities": ["Synchronize", "Trace"],
 					"items": ["Fairy Feather"]
+				}
+			],
+			"klefki": [
+				{
+					"species": "Klefki",
+					"moves": ["Psychic", "Flash Cannon", "Draining Kiss"],
+					"abilities": ["Prankster"]
+				}
+			],
+			"granbull": [
+				{
+					"species": "Granbull",
+					"moves": ["Double-Edge", "Earthquake", "Wild Charge", "Outrage"],
+					"abilities": ["Intimidate", "Quick Feet"],
+					"items": ["Sitrus Berry"]
+				},
+				{
+					"species": "Granbull",
+					"moves": ["Fire Fang", "Ice Fang", "Play Rough", "Crunch"],
+					"abilities": ["Intimidate", "Quick Feet"],
+					"items": ["Life Orb"]
 				}
 			],
 			"hippowdon": [
@@ -30207,37 +30228,35 @@
 					"abilities": ["Sand Veil"],
 					"items": ["Smooth Rock"]
 				}
-			],
-			"bronzong": [
-				{
-					"species": "Bronzong",
-					"moves": ["Trick Room", "Extrasensory", "Flash Cannon", "Protect"],
-					"abilities": ["Heatproof"]
-				}
-			],
-			"klefki": [
-				{
-					"species": "Klefki",
-					"moves": ["Psychic", "Flash Cannon", "Draining Kiss"],
-					"abilities": ["Prankster"]
-				}
-			],
-			"lucario": [
-				{
-					"species": "Lucario",
-					"gender": "F",
-					"moves": ["Water Pulse", "Aura Sphere", "Bullet Punch", "Dragon Pulse"],
-					"abilities": ["Steadfast", "Inner Focus"]
-				}
 			]
 		}
 	},
-	"Thalassa": {
+	"Linnea": {
 		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/VSFurisode_Girl_2.png/170px-VSFurisode_Girl_2.png",
 		"gen": 6,
 		"tiers": ["Ace"],
 		"types": ["Water"],
 		"essentialPokemon": {
+			"aromatisse": [
+				{
+					"species": "Aromatisse",
+					"moves": ["Round", "Psychic", "Energy Ball", "Dazzling Gleam"],
+					"abilities": ["Healer"],
+					"items": ["Assault Vest"]
+				},
+				{
+					"species": "Aromatisse",
+					"moves": ["Flash Cannon", "Thunder", "Psyshock", "Moonblast"],
+					"abilities": ["Healer"],
+					"items": ["Expert Belt"]
+				},
+				{
+					"species": "Aromatisse",
+					"moves": ["Calm Mind", "Dazzling Gleam", "Psyshock", "Moonblast"],
+					"abilities": ["Healer"],
+					"items": ["Leftovers"]
+				}
+			],
 			"politoed": [
 				{
 					"species": "Politoed",
@@ -30267,21 +30286,7 @@
 					"items": ["Damp Rock"]
 				}
 			],
-			"slowking": [
-				{
-					"species": "Slowking",
-					"gender": "M",
-					"moves": ["Trick Room", "Zen Headbutt", "Scald", "Brick Break"],
-					"abilities": ["Oblivious"]
-				}
-			],
-			"electic": [
-				{
-					"species": "Raichu",
-					"gender": "M",
-					"moves": ["Thunderbolt", "Surf", "Thunder", "Iron Tail"],
-					"abilities": ["Static"]
-				},
+			"jolteon": [
 				{
 					"species": "Jolteon",
 					"gender": "M",
@@ -30661,6 +30666,79 @@
 					"gender": "F",
 					"moves": ["Hyper Voice", "Wish", "Take Down", "Zen Headbutt"],
 					"abilities": ["Regenerator"]
+				}
+			]
+		}
+	},
+	"Rintaro": {
+		"sprite": "https://archives.bulbagarden.net/media/upload/thumb/e/e5/Infinite_Z-A_Royale_Profile_Rintaro.png/250px-Infinite_Z-A_Royale_Profile_Rintaro.png",
+		"gen": 6,
+		"game": "PLZA",
+		"tiers": ["Ace"],
+		"essentialPokemon": {
+			"simisage": [
+				{
+					"species": "Simisage",
+					"gender": "M",
+					"moves": ["Protect", "Giga Drain", "Crunch", "Rock Tomb"],
+					"abilities": ["Gluttony"],
+					"items": ["Occa Berry"]
+				}
+			],
+			"simipour": [
+				{
+					"species": "Simipour",
+					"gender": "M",
+					"moves": ["Protect", "Liquidation", "Ice Beam", "Gunk Shot"],
+					"abilities": ["Gluttony"],
+					"items": ["Rindo Berry"]
+				}
+			],
+			"simisear": [
+				{
+					"species": "Simisear",
+					"gender": "M",
+					"moves": ["Protect", "Fire Blast", "Solar Beam", "Flame Wheel"],
+					"abilities": ["Gluttony"],
+					"items": ["Passho Berry"]
+				}
+			]
+		},
+		"pokemon": {
+			"umbreon": [
+				{
+					"species": "Umbreon",
+					"gender": "M",
+					"moves": ["Protect", "Snarl", "Moonlight", "Toxic"],
+					"abilities": ["Synchronize"]
+				}
+			],
+			"espeon": [
+				{
+					"species": "Espeon",
+					"gender": "M",
+					"moves": ["Protect", "Power Gem", "Charm", "Psychic"],
+					"abilities": ["Synchronize"]
+				}
+			],
+			"eeveelution":[
+				{
+					"species": "Jolteon",
+					"gender": "M",
+					"moves": ["Thunderbolt", "Shadow Ball", "Discharge", "Hyper Voice"],
+					"abilities": ["Volt Absorb"]
+				},
+				{
+					"species": "Vaporeon",
+					"gender": "M",
+					"moves": ["Ice Beam", "Hydro Pump", "Surf", "Blizzard"],
+					"abilities": ["Hydration"]
+				},
+				{
+					"species": "Flareon",
+					"gender": "M",
+					"moves": ["Iron Tail", "Fire Fang", "Fire Spin", "Dig"],
+					"abilities": ["Flash Fire"]
 				}
 			]
 		}
